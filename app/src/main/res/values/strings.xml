@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">DQForOlivia</string>
+    <string name="stepCount">步数</string>
+    <string name="time">下午 16:30</string>
+    <string name="stepNumber">5000 步</string>
+    <string name="oliviaTest2">Olivia___Test</string>
+    <string name="oliviaTest3">Olivia___Test__2222</string>
+    <string name="oliviaTest4">Olivia___Test__3333</string>
 </resources>

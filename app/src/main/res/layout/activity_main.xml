@@ -2,9 +2,244 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <TextView
+
+    <!-- 学习相对位置的布局，还有样式的设置 -->
+    <!--摘要区域-->
+    <RelativeLayout
+        android:id="@+id/top_01"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_marginTop="22dp"
+        android:background="#fff">
+
+        <TextView
+            android:layout_width="44dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="10dp"
+            android:text="摘要"
+            android:textColor="#333"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:layout_width="23dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/person" />
+
+    </RelativeLayout>
+
+    <!-- 个人收藏区域 -->
+    <RelativeLayout
+        android:id="@+id/top_02"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_below="@+id/top_01"
+        android:background="#fff">
+
+        <TextView
+            style="@style/BoxStyle1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:text="个人收藏" />
+
+        <TextView
+            style="@style/BoxStyle1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="编辑" />
+    </RelativeLayout>
+
+    <!-- Card 步数 -->
+    <RelativeLayout
+        android:id="@+id/top_03"
+        style="@style/CardStyle1"
+        android:layout_width="match_parent"
+        android:layout_height="76dp"
+        android:layout_below="@+id/top_02"
+        android:background="@drawable/border">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/stepCount" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="@string/time" />
+
+        <TextView
+            style="@style/BoldTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:text="@string/stepNumber" />
+    </RelativeLayout>
+
+    <!-- 经期跟踪 -->
+    <RelativeLayout
+        android:id="@+id/top_4"
+        style="@style/CardStyle1"
+        android:layout_width="match_parent"
+        android:layout_height="76dp"
+        android:layout_below="@+id/top_03"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/border">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="经期跟踪" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:text="月经量" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:text="11天前" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+
+            android:text="10月26日" />
+
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:checked="true" />
+
+
+        <androidx.appcompat.widget.AppCompatToggleButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:textOff="AHong"
+            android:textOn="DQ"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+    <!-- 睡眠 -->
+    <RelativeLayout
+        android:id="@+id/top_5"
+        style="@style/CardStyle1"
+        android:layout_width="match_parent"
+        android:layout_height="76dp"
+        android:layout_below="@+id/top_4"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/border">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="睡眠" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:text="6小时51分钟" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:text="卧床时间" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="上午7:14" />
+
+
+    </RelativeLayout>
+
+    <!-- 显示所有健康数据 -->
+    <RelativeLayout
+        android:id="@+id/top_06"
+        style="@style/CardStyle1"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:layout_below="@id/top_5"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/border">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="显示所有健康数据"
+            android:textColor="#0000ff" />
+
+    </RelativeLayout>
+
+    <!--  练习引入 -->
+    <include
+        android:id="@+id/top_07"
+        style="@style/marginStyle"
+        layout="@layout/activity_two"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:text="olivia env!" />
+        android:layout_below="@+id/top_06" />
+
+    <include
+        android:id="@+id/top_08"
+        style="@style/marginStyle"
+        layout="@layout/activity_two"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/top_07"
+
+        />
+
+    <include
+        android:id="@+id/top_09"
+        style="@style/marginStyle"
+        layout="@layout/activity_two"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/top_08" />
+
+    <!--  练习引入的值，可以通过定义变量进行修改 -->
+    <include
+        android:id="@+id/top_10"
+        style="@style/marginStyle"
+        layout="@layout/activity_two"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/top_09" />
+
+    <include
+        android:id="@+id/top_11"
+        style="@style/marginStyle"
+        layout="@layout/activity_two"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/top_10"
+        />
+
+    <include
+        android:id="@+id/top_12"
+        style="@style/marginStyle"
+        layout="@layout/activity_two"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/top_11" />
 </RelativeLayout>
