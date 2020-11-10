@@ -10,11 +10,15 @@
         android:layout_width="match_parent"
         android:layout_height="54dp"
         android:background="@drawable/bg_border">
-
+        <!--标题信息-->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Trivel Notes" />
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:text="@string/page01_title"
+            android:textSize="20sp"
+            android:textStyle="bold" />
     </RelativeLayout>
 
     <!-- 第二部分 ： 搜索框-->
@@ -58,12 +62,12 @@
                 android:layout_height="match_parent"
                 android:background="@drawable/bg_border">
                 <!--人物头像-->
-                <ImageButton
-                    android:layout_width="54dp"
+                <ImageView
+                    android:layout_width="34dp"
                     android:layout_height="34dp"
                     android:layout_alignParentTop="true"
                     android:layout_centerInParent="true"
-                    android:background="@drawable/person" />
+                    android:background="@drawable/person_01" />
                 <!--人物姓名 -->
                 <TextView
                     android:id="@+id/name_person_1"
@@ -94,12 +98,12 @@
                 android:layout_height="match_parent"
                 android:background="@drawable/bg_border">
                 <!--人物头像-->
-                <ImageButton
-                    android:layout_width="54dp"
+                <ImageView
+                    android:layout_width="34dp"
                     android:layout_height="34dp"
                     android:layout_alignParentTop="true"
                     android:layout_centerInParent="true"
-                    android:background="@drawable/person" />
+                    android:background="@drawable/person_02" />
                 <!--人物姓名 -->
                 <TextView
                     android:id="@+id/name_person_2"
@@ -131,11 +135,11 @@
                 android:background="@drawable/bg_border">
                 <!--人物头像-->
                 <ImageButton
-                    android:layout_width="54dp"
+                    android:layout_width="34dp"
                     android:layout_height="34dp"
                     android:layout_alignParentTop="true"
                     android:layout_centerInParent="true"
-                    android:background="@drawable/person" />
+                    android:background="@drawable/person_01" />
                 <!--人物姓名 -->
                 <TextView
                     android:id="@+id/name_person_3"
@@ -164,129 +168,210 @@
     </RelativeLayout>
 
     <!-- 第四部分：风景介绍-->
-    <RelativeLayout
+    <LinearLayout
         android:id="@+id/part_04"
         android:layout_width="match_parent"
-        android:layout_height="158dp"
+        android:layout_height="wrap_content"
         android:layout_below="@+id/part_03"
-        android:background="@drawable/bg_border">
+        android:background="@drawable/bg_border"
+        android:orientation="vertical">
         <!--风景介绍标题-->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="28dp"
             android:text="Popular travel"
             android:textStyle="bold" />
-        <!--风景详细介绍-->
-        <RelativeLayout
+        <!--风景卡片1-->
+        <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_height="130dp"
-            android:layout_alignParentBottom="true">
-            <!--风景卡片-->
-            <LinearLayout
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <!--详细介绍的风景图-->
+            <ImageView
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/pic_01" />
+            <!--详细介绍的文字信息-->
+            <RelativeLayout
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
-                <!--详细介绍的风景图-->
-                <ImageButton
-                    android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_border"
+                android:paddingLeft="18dp">
+
+                <TextView
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/person" />
-                <!--详细介绍的文字信息-->
-                <RelativeLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:background="@drawable/bg_border"
-                    android:paddingLeft="18dp">
+                    android:layout_alignParentTop="true"
+                    android:text="Snow Mountain"
+                    android:textStyle="bold" />
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentTop="true"
-                        android:text="Snow Mountain"
-                        android:textStyle="bold" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="Watch the sunset from the snow mountain" />
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_centerInParent="true"
-                        android:text="Watch the sunset from the snow mountain" />
-
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="24dp"
+                    android:layout_alignParentBottom="true">
+                    <!--  观看人数 -->
                     <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="24dp"
-                        android:layout_alignParentBottom="true">
-                        <!--  观看人数 -->
-                        <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <ImageButton
+                            android:layout_width="12dp"
+                            android:layout_height="12dp"
+                            android:background="@drawable/person" />
+
+                        <TextView
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content">
-
-                            <ImageButton
-                                android:layout_width="12dp"
-                                android:layout_height="12dp"
-                                android:background="@drawable/person" />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="2208" />
-                        </LinearLayout>
-
-                        <!-- 评论-->
-                        <LinearLayout
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content">
-
-                            <ImageButton
-                                android:layout_width="12dp"
-                                android:layout_height="12dp"
-                                android:background="@drawable/person" />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="20" />
-                        </LinearLayout>
-                        <!-- 收藏-->
-                        <LinearLayout
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content">
-
-                            <ImageButton
-                                android:layout_width="12dp"
-                                android:layout_height="12dp"
-                                android:background="@drawable/person" />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="20" />
-                        </LinearLayout>
+                            android:layout_height="wrap_content"
+                            android:text="2208" />
                     </LinearLayout>
-                </RelativeLayout>
-            </LinearLayout>
-        </RelativeLayout>
-    </RelativeLayout>
+
+                    <!-- 评论-->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <ImageButton
+                            android:layout_width="12dp"
+                            android:layout_height="12dp"
+                            android:background="@drawable/person" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="20" />
+                    </LinearLayout>
+                    <!-- 收藏-->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <ImageButton
+                            android:layout_width="12dp"
+                            android:layout_height="12dp"
+                            android:background="@drawable/person" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="20" />
+                    </LinearLayout>
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+        <!--风景详细介绍-->
+        <!--风景卡片1-->
+        <LinearLayout
+            android:id="@+id/pic_01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <!--详细介绍的风景图-->
+            <ImageView
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/pic_02"/>
+            <!--详细介绍的文字信息-->
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_border"
+                android:paddingLeft="18dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:text="Snow Mountain"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="Watch the sunset from the snow mountain" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="24dp"
+                    android:layout_alignParentBottom="true">
+                    <!--  观看人数 -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <ImageButton
+                            android:layout_width="12dp"
+                            android:layout_height="12dp"
+                            android:background="@drawable/person" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="2208" />
+                    </LinearLayout>
+
+                    <!-- 评论-->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <ImageButton
+                            android:layout_width="12dp"
+                            android:layout_height="12dp"
+                            android:background="@drawable/person" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="20" />
+                    </LinearLayout>
+                    <!-- 收藏-->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <ImageButton
+                            android:layout_width="12dp"
+                            android:layout_height="12dp"
+                            android:background="@drawable/person" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="20" />
+                    </LinearLayout>
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
 
     <!--最后部分,菜单栏-->
     <LinearLayout
         android:layout_width="wrap_content"
-        android:layout_alignParentBottom="true"
         android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
         android:orientation="horizontal">
 
         <ImageView
             android:layout_width="130dp"
             android:layout_height="45dp"
-
-            android:src="@drawable/person"/>
-
-        <ImageView
-            android:layout_width="130dp"
-            android:layout_height="45dp"
-            android:src="@drawable/person"/>
+            android:src="@drawable/icon_01" />
 
         <ImageView
             android:layout_width="130dp"
             android:layout_height="45dp"
-            android:src="@drawable/person"/>
+            android:src="@drawable/icon_02" />
+
+        <ImageView
+            android:layout_width="130dp"
+            android:layout_height="45dp"
+            android:src="@drawable/icon_03" />
     </LinearLayout>
 </RelativeLayout>
