@@ -66,7 +66,7 @@
                     android:background="@drawable/person" />
                 <!--人物姓名 -->
                 <TextView
-                    android:id="@+id/name_person"
+                    android:id="@+id/name_person_1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
@@ -75,7 +75,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/name_person"
+                    android:layout_below="@+id/name_person_1"
                     android:layout_centerInParent="true"
                     android:text="1906 Followers"
                     android:textSize="8sp" />
@@ -102,7 +102,7 @@
                     android:background="@drawable/person" />
                 <!--人物姓名 -->
                 <TextView
-                    android:id="@+id/name_person"
+                    android:id="@+id/name_person_2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
@@ -111,7 +111,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/name_person"
+                    android:layout_below="@+id/name_person_2"
                     android:layout_centerInParent="true"
                     android:text="1906 Followers"
                     android:textSize="8sp" />
@@ -138,7 +138,7 @@
                     android:background="@drawable/person" />
                 <!--人物姓名 -->
                 <TextView
-                    android:id="@+id/name_person"
+                    android:id="@+id/name_person_3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
@@ -147,7 +147,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/name_person"
+                    android:layout_below="@+id/name_person_3"
                     android:layout_centerInParent="true"
                     android:text="1906 Followers"
                     android:textSize="8sp" />
@@ -163,7 +163,7 @@
         </LinearLayout>
     </RelativeLayout>
 
-    <!--    第四部分：风景介绍-->
+    <!-- 第四部分：风景介绍-->
     <RelativeLayout
         android:id="@+id/part_04"
         android:layout_width="match_parent"
@@ -198,21 +198,21 @@
                     android:paddingLeft="18dp">
 
                     <TextView
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_alignParentTop="true"
                         android:text="Snow Mountain"
                         android:textStyle="bold" />
 
                     <TextView
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_centerInParent="true"
                         android:text="Watch the sunset from the snow mountain" />
 
                     <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:layout_height="24dp"
                         android:layout_alignParentBottom="true">
                         <!--  观看人数 -->
                         <LinearLayout
@@ -220,8 +220,9 @@
                             android:layout_height="wrap_content">
 
                             <ImageButton
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content" />
+                                android:layout_width="12dp"
+                                android:layout_height="12dp"
+                                android:background="@drawable/person" />
 
                             <TextView
                                 android:layout_width="wrap_content"
@@ -235,8 +236,9 @@
                             android:layout_height="wrap_content">
 
                             <ImageButton
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content" />
+                                android:layout_width="12dp"
+                                android:layout_height="12dp"
+                                android:background="@drawable/person" />
 
                             <TextView
                                 android:layout_width="wrap_content"
@@ -249,8 +251,9 @@
                             android:layout_height="wrap_content">
 
                             <ImageButton
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content" />
+                                android:layout_width="12dp"
+                                android:layout_height="12dp"
+                                android:background="@drawable/person" />
 
                             <TextView
                                 android:layout_width="wrap_content"
@@ -263,5 +266,27 @@
         </RelativeLayout>
     </RelativeLayout>
 
+    <!--最后部分,菜单栏-->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
 
+        <ImageView
+            android:layout_width="130dp"
+            android:layout_height="45dp"
+
+            android:src="@drawable/person"/>
+
+        <ImageView
+            android:layout_width="130dp"
+            android:layout_height="45dp"
+            android:src="@drawable/person"/>
+
+        <ImageView
+            android:layout_width="130dp"
+            android:layout_height="45dp"
+            android:src="@drawable/person"/>
+    </LinearLayout>
 </RelativeLayout>
