@@ -38,7 +38,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 //        btn_01.setOnClickListener(new View.OnClickListener() {
 //            @Override
 //            public void onClick(View v) {
-//
 //                TextView text_default = (TextView) findViewById(R.id.default_id);
 //                text_default.setText("Olivia lover DQ");
 //
@@ -94,6 +93,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 //        new_tv.setBackgroundColor(ContextCompat.getColor(this, android.R.color.holo_purple));
 
 //        new_tv.setBackgroundColor(ContextCompat.getColor(this, android.R.color.holo_blue_bright));
+
         /* 设置边框 */
         new_tv.setBackgroundResource(R.drawable.person);
 //        BitmapFactory.decodeFile()

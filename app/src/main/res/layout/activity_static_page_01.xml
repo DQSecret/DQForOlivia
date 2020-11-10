@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <!--第一部分 : 标题-->
+    <RelativeLayout
+        android:id="@+id/part_01"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:background="@drawable/bg_border">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Trivel Notes" />
+    </RelativeLayout>
+
+    <!-- 第二部分 ： 搜索框-->
+    <RelativeLayout
+        android:id="@+id/part_02"
+        android:layout_width="wrap_content"
+        android:layout_height="54dp"
+        android:layout_below="@+id/part_01">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+    <!-- 第三部分： 人物介绍-->
+    <RelativeLayout
+        android:id="@+id/part_03"
+        android:layout_width="match_parent"
+        android:layout_height="123dp"
+        android:layout_below="@+id/part_02"
+        android:background="@drawable/bg_border">
+        <!--人物介绍标题-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:text="Popular author"
+            android:textStyle="bold" />
+        <!--人物卡片信息-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="105dp"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/bg_border"
+            android:orientation="horizontal">
+            <!--卡片盒子-->
+            <RelativeLayout
+                android:id="@+id/person_card_01"
+                android:layout_width="85dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_border">
+                <!--人物头像-->
+                <ImageButton
+                    android:layout_width="54dp"
+                    android:layout_height="34dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/person" />
+                <!--人物姓名 -->
+                <TextView
+                    android:id="@+id/name_person"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="Muzi" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/name_person"
+                    android:layout_centerInParent="true"
+                    android:text="1906 Followers"
+                    android:textSize="8sp" />
+                <!--关注人物-->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerInParent="true"
+                    android:text="Follow" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/person_card_02"
+                android:layout_width="85dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_border">
+                <!--人物头像-->
+                <ImageButton
+                    android:layout_width="54dp"
+                    android:layout_height="34dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/person" />
+                <!--人物姓名 -->
+                <TextView
+                    android:id="@+id/name_person"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="Muzi" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/name_person"
+                    android:layout_centerInParent="true"
+                    android:text="1906 Followers"
+                    android:textSize="8sp" />
+                <!--关注人物-->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerInParent="true"
+                    android:text="Follow" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/person_card_03"
+                android:layout_width="85dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_border">
+                <!--人物头像-->
+                <ImageButton
+                    android:layout_width="54dp"
+                    android:layout_height="34dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/person" />
+                <!--人物姓名 -->
+                <TextView
+                    android:id="@+id/name_person"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="Muzi" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/name_person"
+                    android:layout_centerInParent="true"
+                    android:text="1906 Followers"
+                    android:textSize="8sp" />
+                <!--关注人物-->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerInParent="true"
+                    android:text="Follow" />
+            </RelativeLayout>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <!--    第四部分：风景介绍-->
+    <RelativeLayout
+        android:id="@+id/part_04"
+        android:layout_width="match_parent"
+        android:layout_height="158dp"
+        android:layout_below="@+id/part_03"
+        android:background="@drawable/bg_border">
+        <!--风景介绍标题-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="28dp"
+            android:text="Popular travel"
+            android:textStyle="bold" />
+        <!--风景详细介绍-->
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="130dp"
+            android:layout_alignParentBottom="true">
+            <!--风景卡片-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <!--详细介绍的风景图-->
+                <ImageButton
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/person" />
+                <!--详细介绍的文字信息-->
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bg_border"
+                    android:paddingLeft="18dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:text="Snow Mountain"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="Watch the sunset from the snow mountain" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true">
+                        <!--  观看人数 -->
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <ImageButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="2208" />
+                        </LinearLayout>
+
+                        <!-- 评论-->
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <ImageButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="20" />
+                        </LinearLayout>
+                        <!-- 收藏-->
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <ImageButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="20" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </RelativeLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+</RelativeLayout>
