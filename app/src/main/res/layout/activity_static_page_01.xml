@@ -60,13 +60,14 @@
                 android:id="@+id/person_card_01"
                 android:layout_width="85dp"
                 android:layout_height="match_parent"
-                android:background="@drawable/bg_border">
+                >
                 <!--人物头像-->
                 <ImageView
                     android:layout_width="34dp"
                     android:layout_height="34dp"
                     android:layout_alignParentTop="true"
                     android:layout_centerInParent="true"
+                    android:layout_marginTop="10dp"
                     android:background="@drawable/person_01" />
                 <!--人物姓名 -->
                 <TextView
@@ -96,13 +97,15 @@
                 android:id="@+id/person_card_02"
                 android:layout_width="85dp"
                 android:layout_height="match_parent"
-                android:background="@drawable/bg_border">
+                >
                 <!--人物头像-->
                 <ImageView
                     android:layout_width="34dp"
                     android:layout_height="34dp"
                     android:layout_alignParentTop="true"
+
                     android:layout_centerInParent="true"
+                    android:layout_marginTop="10dp"
                     android:background="@drawable/person_02" />
                 <!--人物姓名 -->
                 <TextView
@@ -132,13 +135,15 @@
                 android:id="@+id/person_card_03"
                 android:layout_width="85dp"
                 android:layout_height="match_parent"
-                android:background="@drawable/bg_border">
+                >
                 <!--人物头像-->
                 <ImageButton
                     android:layout_width="34dp"
                     android:layout_height="34dp"
                     android:layout_alignParentTop="true"
+
                     android:layout_centerInParent="true"
+                    android:layout_marginTop="10dp"
                     android:background="@drawable/person_01" />
                 <!--人物姓名 -->
                 <TextView
@@ -203,6 +208,7 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentTop="true"
                     android:text="Snow Mountain"
+                    android:elevation="3dp"
                     android:textStyle="bold" />
 
                 <TextView
@@ -275,7 +281,7 @@
             <ImageView
                 android:layout_width="180dp"
                 android:layout_height="wrap_content"
-                android:background="@drawable/pic_02"/>
+                android:background="@drawable/pic_02" />
             <!--详细介绍的文字信息-->
             <RelativeLayout
                 android:layout_width="wrap_content"
