@@ -8,6 +8,8 @@ import android.telephony.ims.ImsRcsManager;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import androidx.annotation.Nullable;
@@ -105,5 +107,20 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         new_tv.getLayoutParams().width = 300;
         // add view
         root.addView(new_tv);
+    }
+
+    private void clickText03() {
+        RelativeLayout root2 = findViewById(R.id.root_01);
+        TextView tv_02 = new TextView(this);
+        /*添加参数*/
+        LinearLayoutCompat.LayoutParams lp_02 = new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT)
+        tv_02.setLayoutParams(lp_02);
+
+        tv_02.setText("Olivia create new text");
+        tv_02.setTextSize(30);
+
+
+
+        root2.addView(tv_02);
     }
 }
