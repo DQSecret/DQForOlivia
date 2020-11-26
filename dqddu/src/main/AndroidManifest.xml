@@ -1,21 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.dqddu">
 
+    <!-- 监听用户截屏所需, 详见[Screenshots] -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
     <application
+        android:name=".base.BaseApp"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.DQForOlivia">
-        <activity android:name=".MainActivity">
+        android:theme="@style/Theme.DQForOlivia"
+        tools:ignore="AllowBackup">
+
+        <activity android:name=".main.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-    </application>
 
+        <activity android:name=".screenshots.ScreenshotsActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <!-- eg: dqforolivia://www.dqforolivia.com/screenshots -->
+                <data
+                    android:host="@string/intent_host"
+                    android:path="/screenshots"
+                    android:scheme="@string/intent_scheme" />
+            </intent-filter>
+        </activity>
+    </application>
 </manifest>
