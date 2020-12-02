@@ -9,25 +9,28 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class MyNetWork {
-    void test() {
+    // start send request
+    void startRequest() {
 
-        // tool object
-        Retrofit myretrofilt = new Retrofit.Builder()
+        // Tool object
+        Retrofit myretrofit = new Retrofit.Builder()
                 .baseUrl("https://www.wanandroid.com/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
 
-        // service object and bind function
-        MyApi service = myretrofilt.create(MyApi.class);
+        // Service object and bind function
+        MyApi service = myretrofit.create(MyApi.class);
 
+        // Response object
         Call<MyBaseData> res = service.getArticleList();
 
         res.enqueue(new Callback<MyBaseData>() {
             // success
             @Override
             public void onResponse(Call<MyBaseData> call, Response<MyBaseData> response) {
-               String names = response.body().data.get(0).name;
+                String names = response.body().data.get(0).name;
             }
+
             // failed
             @Override
             public void onFailure(Call<MyBaseData> call, Throwable t) {
@@ -40,10 +43,12 @@ public class MyNetWork {
 
 }
 
+// Base data
 class MyBaseData {
     List<MyData> data;
 }
 
+// data structure
 class MyData {
     String name;
     int age;

@@ -1,22 +1,15 @@
 package com.example.dqforolivia;
 
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
-import android.telephony.ims.ImsRcsManager;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.DrawableUtils;
 import androidx.appcompat.widget.LinearLayoutCompat;
-import androidx.core.content.ContextCompat;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -115,14 +108,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         RelativeLayout root2 = findViewById(R.id.root_01);
         TextView tv_02 = new TextView(this);
         /*添加参数*/
-        LinearLayoutCompat.LayoutParams lp_02 = new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT)
-        tv_02.setLayoutParams(lp_02);
-
-        tv_02.setText("Olivia create new text");
-        tv_02.setTextSize(30);
-
-
-
-        root2.addView(tv_02);
+//        LinearLayoutCompat.LayoutParams lp_02 = new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT)
+//        tv_02.setLayoutParams(lp_02);
+//
+//        tv_02.setText("Olivia create new text");
+//        tv_02.setTextSize(30);
+//
+//
+//
+//        root2.addView(tv_02);
     }
 }
