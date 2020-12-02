@@ -53,6 +53,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 //        View three =  LayoutInflater.from(this).inflate(R.layout.activity_three,null);
 
         findViewById(R.id.btn_02).setOnClickListener(this);
+
+        new Network().test();
     }
 
     @Override
