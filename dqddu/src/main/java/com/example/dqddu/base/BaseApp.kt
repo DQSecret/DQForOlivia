@@ -2,6 +2,8 @@ package com.example.dqddu.base
 
 import android.app.Application
 import android.content.Context
+import com.orhanobut.logger.AndroidLogAdapter
+import com.orhanobut.logger.Logger
 
 /**
  * BaseApp
@@ -19,5 +21,11 @@ class BaseApp : Application() {
     override fun attachBaseContext(base: Context?) {
         super.attachBaseContext(base)
         app = this
+    }
+
+    override fun onCreate() {
+        super.onCreate()
+        // 初始化日志库
+        Logger.addLogAdapter(AndroidLogAdapter())
     }
 }

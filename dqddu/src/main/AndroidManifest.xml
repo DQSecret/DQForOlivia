@@ -5,6 +5,8 @@
 
     <!-- 监听用户截屏所需, 详见[Screenshots] -->
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <!-- 请求网络所需 -->
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:name=".base.BaseApp"
@@ -33,6 +35,19 @@
                 <data
                     android:host="@string/intent_host"
                     android:path="/screenshots"
+                    android:scheme="@string/intent_scheme" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".coroutines.example.ui.NetworkExampleActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <!-- eg: dqforolivia://www.dqforolivia.com/network-example -->
+                <data
+                    android:host="@string/intent_host"
+                    android:path="/network-example"
                     android:scheme="@string/intent_scheme" />
             </intent-filter>
         </activity>

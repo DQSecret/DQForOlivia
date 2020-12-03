@@ -15,5 +15,9 @@ class MainActivity : BaseBindingActivity<ActivityMainBinding>() {
         binding.btnScreenshots.setOnClickListener {
             startPageByScheme("screenshots")
         }
+        // 跳转到网络示例
+        binding.btnNetworkExample.setOnClickListener {
+            startPageByScheme("network-example")
+        }
     }
 }
