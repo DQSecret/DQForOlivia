@@ -6,6 +6,7 @@
       <w>gson</w>
       <w>kapt</w>
       <w>moshi</w>
+      <w>motionlayout</w>
       <w>okhttp</w>
     </words>
   </dictionary>

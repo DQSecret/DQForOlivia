@@ -21,10 +21,19 @@
         android:text="@string/str_network_example"
         tools:ignore="MissingConstraints" />
 
+    <Button
+        android:id="@+id/btn_motion_layout_example"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@android:color/holo_purple"
+        android:text="@string/str_motion_layout_example"
+        android:textAllCaps="false"
+        tools:ignore="MissingConstraints" />
+
     <androidx.constraintlayout.helper.widget.Flow
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:constraint_referenced_ids="btn_screenshots,btn_network_example"
+        app:constraint_referenced_ids="btn_screenshots,btn_network_example,btn_motion_layout_example"
         app:flow_maxElementsWrap="1"
         app:flow_wrapMode="chain" />
 </androidx.constraintlayout.widget.ConstraintLayout>

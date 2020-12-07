@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- 初始状态 -->
+    <ConstraintSet android:id="@+id/start">
+        <Constraint
+            android:id="@+id/tv_message"
+            android:layout_width="match_parent"
+            android:layout_height="48dp" />
+        <Constraint
+            android:id="@+id/iv_delete"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            app:layout_constraintBottom_toBottomOf="@id/tv_message"
+            app:layout_constraintEnd_toStartOf="@id/tv_message"
+            app:layout_constraintTop_toTopOf="@id/tv_message" />
+        <Constraint
+            android:id="@+id/iv_good"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            app:layout_constraintBottom_toBottomOf="@id/tv_message"
+            app:layout_constraintEnd_toStartOf="@id/iv_bad"
+            app:layout_constraintStart_toEndOf="@id/tv_message"
+            app:layout_constraintTop_toTopOf="@id/tv_message" />
+        <Constraint
+            android:id="@+id/iv_bad"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            app:layout_constraintBottom_toBottomOf="@id/tv_message"
+            app:layout_constraintStart_toEndOf="@id/iv_good"
+            app:layout_constraintTop_toTopOf="@id/tv_message" />
+    </ConstraintSet>
+
+    <!-- 向左滑, 露出中间+右边, 供用户选择Action -->
+    <ConstraintSet android:id="@+id/end_right">
+        <Constraint
+            android:id="@+id/tv_message"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginEnd="96dp" />
+        <Constraint
+            android:id="@+id/iv_good"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            app:layout_constraintEnd_toStartOf="@id/iv_bad"
+            app:layout_constraintStart_toEndOf="@id/tv_message" />
+        <Constraint
+            android:id="@+id/iv_bad"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/iv_good" />
+    </ConstraintSet>
+    <Transition
+        android:id="@+id/trans_right"
+        app:constraintSetEnd="@id/end_right"
+        app:constraintSetStart="@+id/start">
+        <OnSwipe
+            app:dragDirection="dragLeft"
+            app:touchAnchorId="@id/tv_message"
+            app:touchAnchorSide="right" />
+    </Transition>
+
+    <!-- 向右滑, 左边占满全部, 中间隐藏掉, 结束后, 执行删除操作  -->
+    <ConstraintSet android:id="@+id/end_left">
+        <Constraint
+            android:id="@+id/tv_message"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:alpha="0"
+            app:layout_constraintStart_toEndOf="@id/iv_delete" />
+        <Constraint
+            android:id="@+id/iv_delete"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            app:layout_constraintEnd_toStartOf="@id/tv_message"
+            app:layout_constraintStart_toStartOf="parent" />
+    </ConstraintSet>
+    <Transition
+        android:id="@+id/trans_left"
+        app:constraintSetEnd="@id/end_left"
+        app:constraintSetStart="@id/start">
+        <OnSwipe
+            app:dragDirection="dragRight"
+            app:touchAnchorId="@id/tv_message"
+            app:touchAnchorSide="left" />
+    </Transition>
+</MotionScene>

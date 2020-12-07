@@ -19,5 +19,9 @@ class MainActivity : BaseBindingActivity<ActivityMainBinding>() {
         binding.btnNetworkExample.setOnClickListener {
             startPageByScheme("network-example")
         }
+        // 跳转到MotionLayout示例
+        binding.btnMotionLayoutExample.setOnClickListener {
+            startPageByScheme("motion-layout-example")
+        }
     }
 }

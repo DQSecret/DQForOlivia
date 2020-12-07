@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.motion.widget.MotionLayout
+        android:id="@+id/tl_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layoutDescription="@xml/view_swipe_motion_layout_scene"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:showPaths="true">
+
+        <TextView
+            android:id="@+id/tv_message"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="#80CBC4"
+            android:gravity="start|center_vertical"
+            android:maxLines="1"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:text="@string/str_swipe_view_title"
+            android:textSize="16sp"
+            tools:ignore="MissingConstraints" />
+
+        <ImageView
+            android:id="@+id/iv_delete"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="#F48FB1"
+            android:scaleType="center"
+            android:src="@drawable/iv_delete"
+            tools:ignore="ContentDescription,MissingConstraints" />
+
+        <ImageView
+            android:id="@+id/iv_good"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="#CE93D8"
+            android:scaleType="center"
+            android:src="@drawable/iv_good"
+            tools:ignore="ContentDescription,MissingConstraints" />
+
+        <ImageView
+            android:id="@+id/iv_bad"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="#9FA8DA"
+            android:scaleType="center"
+            android:src="@drawable/iv_bad"
+            tools:ignore="ContentDescription,MissingConstraints" />
+    </androidx.constraintlayout.motion.widget.MotionLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
