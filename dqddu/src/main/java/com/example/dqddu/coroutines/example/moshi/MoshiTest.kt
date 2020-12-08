@@ -35,7 +35,6 @@ class MoshiTest {
         .add(NullToEmptyStringAdapter())
         .build()
 
-
     fun testFullData() {
         val adapter = moshi.adapter(FullData::class.java)
         // deserialize json

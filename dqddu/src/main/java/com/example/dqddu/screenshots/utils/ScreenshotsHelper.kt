@@ -82,8 +82,8 @@ class ScreenshotsHelper(private val context: Context) {
             while (cursor.moveToNext()) {
                 val name = cursor.getString(displayNameColumn)
                 val relativePath = cursor.getString(relativePathColumn)
-                if (name.contains("screenshot", true)
-                    || relativePath.contains("screenshot", true)
+                if (name.contains("screenshot", true) ||
+                    relativePath.contains("screenshot", true)
                 ) {
                     // do something
                     Toast.makeText(context, name, Toast.LENGTH_LONG).show()

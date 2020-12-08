@@ -3,6 +3,7 @@ plugins {
     id 'kotlin-android'
     id 'kotlin-parcelize' // 帮助 data class 快速实现序列化 @Parcelize
     id 'kotlin-kapt' // kapt 即 Kotlin annotation processing tool（Kotlin 注解处理工具）缩写。
+    id 'io.gitlab.arturbosch.detekt'
 }
 
 android {
@@ -80,4 +81,8 @@ dependencies {
     implementation 'com.orhanobut:logger:2.2.0'
     // coroutines
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.6'
+
+    // detekt 代码检查
+    detekt 'io.gitlab.arturbosch.detekt:detekt-formatting:1.15.0-RC1'
+    detekt 'io.gitlab.arturbosch.detekt:detekt-cli:1.15.0-RC1'
 }
