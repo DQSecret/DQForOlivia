@@ -10,6 +10,7 @@
         android:id="@+id/btn_screenshots"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:backgroundTint="#F44336"
         android:text="@string/str_screenshots"
         tools:ignore="MissingConstraints" />
 
@@ -17,7 +18,7 @@
         android:id="@+id/btn_network_example"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="@android:color/holo_blue_light"
+        android:backgroundTint="#E91E63"
         android:text="@string/str_network_example"
         tools:ignore="MissingConstraints" />
 
@@ -25,15 +26,32 @@
         android:id="@+id/btn_motion_layout_example"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="@android:color/holo_purple"
+        android:backgroundTint="#9C27B0"
         android:text="@string/str_motion_layout_example"
         android:textAllCaps="false"
         tools:ignore="MissingConstraints" />
 
+    <Button
+        android:id="@+id/btn_motion_layout_example_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#673AB7"
+        android:text="@string/str_motion_layout_example_2"
+        android:textAllCaps="false"
+        tools:ignore="MissingConstraints" />
+
     <androidx.constraintlayout.helper.widget.Flow
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:constraint_referenced_ids="btn_screenshots,btn_network_example,btn_motion_layout_example"
-        app:flow_maxElementsWrap="1"
-        app:flow_wrapMode="chain" />
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="btn_screenshots,btn_network_example,btn_motion_layout_example,btn_motion_layout_example_2"
+        app:flow_horizontalBias="0"
+        app:flow_horizontalGap="10dp"
+        app:flow_horizontalStyle="packed"
+        app:flow_maxElementsWrap="2"
+        app:flow_verticalGap="10dp"
+        app:flow_wrapMode="chain"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

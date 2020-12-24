@@ -64,5 +64,18 @@
                     android:scheme="@string/intent_scheme" />
             </intent-filter>
         </activity>
+
+        <activity android:name=".motionlayout.example.MotionLayoutExample2Activity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <!-- eg: dqforolivia://www.dqforolivia.com/motion-layout-example-2 -->
+                <data
+                    android:host="@string/intent_host"
+                    android:path="/motion-layout-example-2"
+                    android:scheme="@string/intent_scheme" />
+            </intent-filter>
+        </activity>
     </application>
 </manifest>

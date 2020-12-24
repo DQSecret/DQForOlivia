@@ -23,5 +23,9 @@ class MainActivity : BaseBindingActivity<ActivityMainBinding>() {
         binding.btnMotionLayoutExample.setOnClickListener {
             startPageByScheme("motion-layout-example")
         }
+        // 跳转到MotionLayout示例2
+        binding.btnMotionLayoutExample2.setOnClickListener {
+            startPageByScheme("motion-layout-example-2")
+        }
     }
 }
