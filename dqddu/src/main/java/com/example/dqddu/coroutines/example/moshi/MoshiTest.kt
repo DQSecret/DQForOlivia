@@ -1,3 +1,5 @@
+@file:Suppress("NoWildcardImports", "WildcardImport")
+
 package com.example.dqddu.coroutines.example.moshi
 
 import androidx.annotation.Nullable

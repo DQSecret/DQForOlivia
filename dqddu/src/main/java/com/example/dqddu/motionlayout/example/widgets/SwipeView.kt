@@ -14,7 +14,9 @@ import com.example.dqddu.R
  * @see <a href="文章">https://proandroiddev.com/building-swipeview-using-motionlayout-7a80fd06401c</a>
  */
 class SwipeView @JvmOverloads constructor(
-    context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0
+    context: Context,
+    attrs: AttributeSet? = null,
+    defStyleAttr: Int = 0
 ) : MotionLayout(context, attrs, defStyleAttr) {
 
     init {

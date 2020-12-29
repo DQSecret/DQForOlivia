@@ -27,5 +27,33 @@ class MainActivity : BaseBindingActivity<ActivityMainBinding>() {
         binding.btnMotionLayoutExample2.setOnClickListener {
             startPageByScheme("motion-layout-example-2")
         }
+        // 跳转到StateFlow示例
+        binding.btnFlowStateFlowExample.setOnClickListener {
+            startPageByScheme("state-flow-example")
+        }
+        // 跳转到StateFlow示例
+        binding.btnFlowSharedFlowExample.setOnClickListener {
+            startPageByScheme("shared-flow-example")
+        }
+        // 跳转到MotionLayout实践
+        binding.btnMotionLayoutPractice.setOnClickListener {
+            startPageByScheme("motion-layout-practice")
+        }
+        // 跳转到MotionLayout实践2
+        binding.btnMotionLayoutPractice2.setOnClickListener {
+            startPageByScheme("motion-layout-practice-2")
+        }
+        // 跳转到ConcatAdapter学习
+        binding.btnConcatAdapterStudy.setOnClickListener {
+            startPageByScheme("concat-adapter-study")
+        }
+        // 跳转到Paging3学习
+        binding.btnPaging3Study.setOnClickListener {
+            startPageByScheme("paging3-study")
+        }
+        // 跳转到ImagePicker
+        binding.btnImagePicker.setOnClickListener {
+            startPageByScheme("image-picker")
+        }
     }
 }

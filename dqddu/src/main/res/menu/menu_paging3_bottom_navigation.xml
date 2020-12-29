@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <item
+        android:id="@+id/remote"
+        android:icon="@drawable/ic_outline_remote"
+        android:title="Remote"
+        tools:ignore="HardcodedText" />
+    <item
+        android:id="@+id/loader"
+        android:icon="@drawable/ic_baseline_loader"
+        android:title="Loader"
+        tools:ignore="HardcodedText" />
+    <item
+        android:id="@+id/room"
+        android:icon="@drawable/ic_outline_room"
+        android:title="Room"
+        tools:ignore="HardcodedText" />
+</menu>

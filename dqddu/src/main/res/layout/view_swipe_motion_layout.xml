@@ -28,7 +28,7 @@
         android:layout_height="48dp"
         android:background="#F48FB1"
         android:scaleType="center"
-        android:src="@drawable/iv_delete"
+        android:src="@drawable/ic_delete"
         tools:ignore="ContentDescription,MissingConstraints" />
 
     <ImageView
@@ -37,7 +37,7 @@
         android:layout_height="48dp"
         android:background="#CE93D8"
         android:scaleType="center"
-        android:src="@drawable/iv_good"
+        android:src="@drawable/ic_good"
         tools:ignore="ContentDescription,MissingConstraints" />
 
     <ImageView
@@ -46,6 +46,6 @@
         android:layout_height="48dp"
         android:background="#9FA8DA"
         android:scaleType="center"
-        android:src="@drawable/iv_bad"
+        android:src="@drawable/ic_bad"
         tools:ignore="ContentDescription,MissingConstraints" />
 </androidx.constraintlayout.motion.widget.MotionLayout>

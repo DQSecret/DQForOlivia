@@ -7,30 +7,38 @@
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <!-- 请求网络所需 -->
     <uses-permission android:name="android.permission.INTERNET" />
+    <!-- WebActivity 需要使用 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- 振动权限 -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <!-- 拍照权限, 详见[ImagePicker] -->
+    <uses-permission android:name="android.permission.CAMERA" />
 
     <application
         android:name=".base.BaseApp"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.DQForOlivia"
-        tools:ignore="AllowBackup">
+        tools:ignore="AllowBackup"
+        tools:targetApi="n">
 
         <activity android:name=".main.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity android:name=".base.WebActivity" />
 
         <activity android:name=".screenshots.ScreenshotsActivity">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
                 <category android:name="android.intent.category.DEFAULT" />
-
                 <!-- eg: dqforolivia://www.dqforolivia.com/screenshots -->
                 <data
                     android:host="@string/intent_host"
@@ -43,7 +51,6 @@
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
                 <category android:name="android.intent.category.DEFAULT" />
-
                 <!-- eg: dqforolivia://www.dqforolivia.com/network-example -->
                 <data
                     android:host="@string/intent_host"
@@ -56,7 +63,6 @@
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
                 <category android:name="android.intent.category.DEFAULT" />
-
                 <!-- eg: dqforolivia://www.dqforolivia.com/motion-layout-example -->
                 <data
                     android:host="@string/intent_host"
@@ -69,7 +75,6 @@
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
                 <category android:name="android.intent.category.DEFAULT" />
-
                 <!-- eg: dqforolivia://www.dqforolivia.com/motion-layout-example-2 -->
                 <data
                     android:host="@string/intent_host"
@@ -77,5 +82,102 @@
                     android:scheme="@string/intent_scheme" />
             </intent-filter>
         </activity>
+
+        <activity android:name=".coroutines.flow.state.StateFlowExampleActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <!-- eg: dqforolivia://www.dqforolivia.com/state-flow-example -->
+                <data
+                    android:host="@string/intent_host"
+                    android:path="/state-flow-example"
+                    android:scheme="@string/intent_scheme" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".coroutines.flow.shared.SharedFlowExampleActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <!-- eg: dqforolivia://www.dqforolivia.com/shared-flow-example -->
+                <data
+                    android:host="@string/intent_host"
+                    android:path="/shared-flow-example"
+                    android:scheme="@string/intent_scheme" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".motionlayout.practice.MotionLayoutPracticeActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <!-- eg: dqforolivia://www.dqforolivia.com/motion-layout-practice -->
+                <data
+                    android:host="@string/intent_host"
+                    android:path="/motion-layout-practice"
+                    android:scheme="@string/intent_scheme" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".motionlayout.practice.MotionLayoutPractice2Activity"
+            android:theme="@style/Theme.MaterialComponents.Light.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <!-- eg: dqforolivia://www.dqforolivia.com/motion-layout-practice-2 -->
+                <data
+                    android:host="@string/intent_host"
+                    android:path="/motion-layout-practice-2"
+                    android:scheme="@string/intent_scheme" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".list.concat.ConcatAdapterStudyActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <!-- eg: dqforolivia://www.dqforolivia.com/concat-adapter-study -->
+                <data
+                    android:host="@string/intent_host"
+                    android:path="/concat-adapter-study"
+                    android:scheme="@string/intent_scheme" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".list.paging3.view.Paging3StudyActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <!-- eg: dqforolivia://www.dqforolivia.com/paging3-study -->
+                <data
+                    android:host="@string/intent_host"
+                    android:path="/paging3-study"
+                    android:scheme="@string/intent_scheme" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".results.ImagePickerActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <!-- eg: dqforolivia://www.dqforolivia.com/image-picker -->
+                <data
+                    android:host="@string/intent_host"
+                    android:path="/image-picker"
+                    android:scheme="@string/intent_scheme" />
+            </intent-filter>
+        </activity>
+        <!-- ImagePickerActivity - ImagePicker 需要用到 -->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
     </application>
 </manifest>

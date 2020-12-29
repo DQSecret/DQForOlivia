@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_refresh"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/layout_coordinator"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/layout_app_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#009688">
+
+            <com.google.android.material.appbar.CollapsingToolbarLayout
+                android:id="@+id/layout_collapsing"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="72dp"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed|enterAlwaysCollapsed"
+                app:statusBarScrim="@android:color/transparent">
+
+                <!-- Header -->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/layout_header"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/iv_bg_header"
+                        android:layout_width="match_parent"
+                        android:layout_height="250dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_motion_background"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="ContentDescription" />
+
+                    <TextView
+                        android:id="@+id/tv_intro"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15sp"
+                        android:layout_marginTop="100dp"
+                        android:layout_marginEnd="15sp"
+                        android:text="我是两句话简介，一个准确的精简的能够概括话题精髓的简介，一个准确的精剪超过两句话截断"
+                        android:textColor="#FFFFFF"
+                        android:textSize="15sp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="HardcodedText" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <!-- ToolBar -->
+                <com.example.dqddu.motionlayout.practice.widgets.TitleSwitchBarView
+                    android:id="@+id/view_title_switch_bar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_collapseMode="pin" />
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+            <!-- 悬浮选择器 -->
+            <com.google.android.material.button.MaterialButtonToggleGroup
+                android:id="@+id/toggle_group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/layout_header"
+                app:singleSelection="true"
+                tools:checkedButton="@id/btn_wish">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_wish"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/str_movie_wish"
+                    android:textColor="@color/selector_wish_txt_color"
+                    android:textSize="14sp"
+                    app:icon="@drawable/ic_favorite_16"
+                    app:iconGravity="textStart"
+                    app:iconPadding="6dp"
+                    app:iconTint="@color/selector_wish_icon_color"
+                    app:rippleColor="#40EC407A"
+                    app:strokeColor="@color/selector_wish_stroke_color" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_seen"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/str_movie_seen"
+                    android:textColor="@color/selector_seen_txt_color"
+                    android:textSize="14sp"
+                    app:icon="@drawable/ic_star_16"
+                    app:iconGravity="textStart"
+                    app:iconPadding="6dp"
+                    app:iconTint="@color/selector_seen_icon_color"
+                    app:rippleColor="#401565C0"
+                    app:strokeColor="@color/selector_seen_stroke_color" />
+            </com.google.android.material.button.MaterialButtonToggleGroup>
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <!-- 下面的列表内容 -->
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/str_large_text" />
+        </androidx.core.widget.NestedScrollView>
+
+        <!-- 要么是一个 ViewPage 要么是一个 TapLayout+Fragment -->
+        <!--    <androidx.viewpager.widget.ViewPager-->
+        <!--        android:id="@+id/viewpager"-->
+        <!--        android:layout_width="match_parent"-->
+        <!--        android:layout_height="match_parent"-->
+        <!--        app:layout_behavior="@string/appbar_scrolling_view_behavior" />-->
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
