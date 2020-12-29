@@ -24,7 +24,9 @@ import kotlinx.coroutines.launch
  * @since 12/17/20 4:21 PM
  */
 class CarouselView @JvmOverloads constructor(
-    context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0
+    context: Context,
+    attrs: AttributeSet? = null,
+    defStyleAttr: Int = 0
 ) : MotionLayout(context, attrs, defStyleAttr) {
 
     private val binding: ViewCarouselMotionLayoutBinding
@@ -41,6 +43,12 @@ class CarouselView @JvmOverloads constructor(
                     binding.tvItemAnother to "First",
                 )
             }
+    }
+
+    companion object {
+        const val TRANSITION_PROGRESS_UPPER_LIMITS = 0.8f
+        const val TRANSITION_PROGRESS_LOWER_LIMITS = 0.2f
+        const val TRANSITION_RE_EVOKE_INTERVAL = 4_000L
     }
 
     fun init() {
@@ -68,10 +76,10 @@ class CarouselView @JvmOverloads constructor(
                 endId: Int,
                 progress: Float
             ) {
-                if ((progress * 100).toInt() >= 80) {
+                if (progress > TRANSITION_PROGRESS_UPPER_LIMITS) {
                     if (!isPaused) {
                         Log.d("DQ", "onTransitionChange: 到${progress}了, 重置然后循环...")
-                        motionLayout?.progress = 0.2f
+                        motionLayout?.progress = TRANSITION_PROGRESS_LOWER_LIMITS
                         motionLayout?.transitionToEnd()
                     }
                 }
@@ -95,7 +103,7 @@ class CarouselView @JvmOverloads constructor(
         }?.let {
             it as LifecycleOwner
             it.lifecycleScope.launch {
-                delay(4000)
+                delay(TRANSITION_RE_EVOKE_INTERVAL)
                 Log.d("DQ", "onPause: 4s到了, 恢复动画~")
                 isPaused = false
                 binding.viewCarouselRoot.progress = progress

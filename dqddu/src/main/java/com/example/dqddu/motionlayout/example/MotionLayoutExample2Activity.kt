@@ -1,5 +1,6 @@
 package com.example.dqddu.motionlayout.example
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import com.example.dqddu.base.BaseBindingActivity
 import com.example.dqddu.databinding.ActivityMotionLayoutExample2Binding
@@ -17,6 +18,7 @@ class MotionLayoutExample2Activity : BaseBindingActivity<ActivityMotionLayoutExa
 
     override fun initBinding() = ActivityMotionLayoutExample2Binding.inflate(layoutInflater)
 
+    @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding.motionStep5.tvPoetry.text = """
