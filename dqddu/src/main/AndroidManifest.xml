@@ -21,7 +21,6 @@
         <activity android:name=".main.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -30,7 +29,6 @@
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
                 <category android:name="android.intent.category.DEFAULT" />
-
                 <!-- eg: dqforolivia://www.dqforolivia.com/screenshots -->
                 <data
                     android:host="@string/intent_host"
@@ -43,7 +41,6 @@
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
                 <category android:name="android.intent.category.DEFAULT" />
-
                 <!-- eg: dqforolivia://www.dqforolivia.com/network-example -->
                 <data
                     android:host="@string/intent_host"
@@ -56,7 +53,6 @@
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
                 <category android:name="android.intent.category.DEFAULT" />
-
                 <!-- eg: dqforolivia://www.dqforolivia.com/motion-layout-example -->
                 <data
                     android:host="@string/intent_host"
@@ -69,11 +65,22 @@
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
                 <category android:name="android.intent.category.DEFAULT" />
-
                 <!-- eg: dqforolivia://www.dqforolivia.com/motion-layout-example-2 -->
                 <data
                     android:host="@string/intent_host"
                     android:path="/motion-layout-example-2"
+                    android:scheme="@string/intent_scheme" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".coroutines.flow.state.StateFlowExampleActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <!-- eg: dqforolivia://www.dqforolivia.com/state-flow-example -->
+                <data
+                    android:host="@string/intent_host"
+                    android:path="/state-flow-example"
                     android:scheme="@string/intent_scheme" />
             </intent-filter>
         </activity>

@@ -27,5 +27,9 @@ class MainActivity : BaseBindingActivity<ActivityMainBinding>() {
         binding.btnMotionLayoutExample2.setOnClickListener {
             startPageByScheme("motion-layout-example-2")
         }
+        // 跳转到StateFlow示例
+        binding.btnFlowStateFlowExample.setOnClickListener {
+            startPageByScheme("state-flow-example")
+        }
     }
 }

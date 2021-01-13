@@ -40,14 +40,22 @@
         android:textAllCaps="false"
         tools:ignore="MissingConstraints" />
 
+    <Button
+        android:id="@+id/btn_flow_state_flow_example"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#3F51B5"
+        android:text="@string/str_flow_state_flow_example"
+        android:textAllCaps="false"
+        tools:ignore="MissingConstraints" />
+
     <androidx.constraintlayout.helper.widget.Flow
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:constraint_referenced_ids="btn_screenshots,btn_network_example,btn_motion_layout_example,btn_motion_layout_example_2"
+        app:constraint_referenced_ids="btn_screenshots,btn_network_example,btn_motion_layout_example,btn_motion_layout_example_2,btn_flow_state_flow_example"
         app:flow_horizontalBias="0"
         app:flow_horizontalGap="10dp"
         app:flow_horizontalStyle="packed"
-        app:flow_maxElementsWrap="2"
         app:flow_verticalGap="10dp"
         app:flow_wrapMode="chain"
         app:layout_constraintBottom_toBottomOf="parent"
