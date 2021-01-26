@@ -111,6 +111,7 @@ dependencies {
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutines_version"
 
     // detekt 代码检查
-    detekt 'io.gitlab.arturbosch.detekt:detekt-formatting:1.15.0-RC1'
-    detekt 'io.gitlab.arturbosch.detekt:detekt-cli:1.15.0-RC1'
+    def detekt_version = "1.15.0-RC1"
+    detekt "io.gitlab.arturbosch.detekt:detekt-formatting:$detekt_version"
+    detekt "io.gitlab.arturbosch.detekt:detekt-cli:$detekt_version"
 }
