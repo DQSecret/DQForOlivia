@@ -26,8 +26,8 @@ class NetworkExampleActivityVM(app: Application = BaseApp.app) : AndroidViewMode
      * @param mockResult 想要模拟的结果 success" or failure
      */
     fun getCommonlyUsedWebSiteListRepoAsync(mockResult: Boolean) = viewModelScope.launch {
-        try {
-            mResultStatusObs.postValue("Loading...")
+        mResultStatusObs.postValue("Loading...")
+        kotlin.runCatching {
             if (mockResult) {
                 val repo = mApiService.getCommonlyUsedWebSiteListRepoAsync()
                 mResultContentObs.postValue(repo.data)
@@ -35,7 +35,7 @@ class NetworkExampleActivityVM(app: Application = BaseApp.app) : AndroidViewMode
             } else {
                 mResultStatusObs.postValue("失败了 ┭┮﹏┭┮ ")
             }
-        } catch (ex: Exception) {
+        }.onFailure {
             mResultContentObs.postValue(emptyList())
             mResultStatusObs.postValue("Server encountered error.")
         }

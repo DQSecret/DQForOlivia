@@ -3,7 +3,6 @@ package com.example.dqddu.coroutines.flow.state
 import android.os.Bundle
 import androidx.activity.viewModels
 import androidx.appcompat.widget.SearchView
-import androidx.lifecycle.Observer
 import androidx.lifecycle.lifecycleScope
 import com.example.dqddu.base.BaseBindingActivity
 import com.example.dqddu.coroutines.flow.logNow
@@ -48,7 +47,7 @@ class StateFlowExampleActivity : BaseBindingActivity<ActivityStateFlowExampleBin
             }
         })
 
-        mViewModel.queryResultFromNetwork.observe(this, Observer { binding.tvResult.text = it })
+        mViewModel.queryResultFromNetwork.observe(this, { binding.tvResult.text = it })
 
         lifecycleScope.launchWhenStarted {
             mViewModel.result.collect {

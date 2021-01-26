@@ -1,3 +1,5 @@
+@file:Suppress("NoWildcardImports", "WildcardImport")
+
 package com.example.dqddu.coroutines.flow
 
 import kotlinx.coroutines.*
@@ -129,7 +131,7 @@ class FlowStudy {
     fun onTest4() {
         runBlocking {
             (simpleIntRange).asFlow()
-                .count() { it > 0 }
+                .count { it > 0 }
                 .also {
                     "($simpleIntRange) count=$it".log()
                 }

@@ -1,3 +1,5 @@
+@file:Suppress("NoWildcardImports", "WildcardImport")
+
 package com.example.dqddu.coroutines.flow
 
 import kotlinx.coroutines.*
@@ -11,7 +13,7 @@ import kotlin.system.measureTimeMillis
  * @since 12/30/20 2:24 PM
  * @see <a href="https://www.kotlincn.net/docs/reference/coroutines/flow.html">官方文档</a>
  */
-@Suppress("MemberVisibilityCanBePrivate", "unused")
+@Suppress("MemberVisibilityCanBePrivate", "unused", "TooManyFunctions")
 class FlowOfficialDocument {
 
     companion object {
@@ -324,10 +326,10 @@ class FlowOfficialDocument {
         // 全局包裹
         "全局包裹".logNow()
         runBlocking {
-            try {
+            kotlin.runCatching {
                 simple.collect { value -> println(value) }
-            } catch (e: Throwable) {
-                println("Caught $e")
+            }.onFailure {
+                println("Caught $it")
             }
         }
         // 异常透明性

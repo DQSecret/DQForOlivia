@@ -1,3 +1,5 @@
+@file:Suppress("NoWildcardImports")
+
 package com.example.dqddu.coroutines.flow
 
 import java.text.SimpleDateFormat

@@ -35,8 +35,8 @@ console-reports:
 output-reports:
   active: true
   exclude:
-  # - 'TxtOutputReport'
-  # - 'XmlOutputReport'
+    - 'TxtOutputReport'
+    - 'XmlOutputReport'
   # - 'HtmlOutputReport'
 
 comments:
@@ -118,7 +118,7 @@ complexity:
     active: true
     excludes: ['**/test/**', '**/androidTest/**', '**/commonTest/**', '**/jvmTest/**', '**/jsTest/**', '**/iosTest/**']
     thresholdInFiles: 11
-    thresholdInClasses: 16 # 默认为 11
+    thresholdInClasses: 11
     thresholdInInterfaces: 11
     thresholdInObjects: 11
     thresholdInEnums: 11
@@ -209,7 +209,7 @@ exceptions:
   ThrowingNewInstanceOfSameException:
     active: false
   TooGenericExceptionCaught:
-    active: false  # 为了协程的异常捕获, 先忽略这个规则
+    active: true
     excludes: ['**/test/**', '**/androidTest/**', '**/commonTest/**', '**/jvmTest/**', '**/jsTest/**', '**/iosTest/**']
     exceptionNames:
      - ArrayIndexOutOfBoundsException
@@ -254,7 +254,7 @@ formatting:
   Filename:
     active: true
   FinalNewline:
-    active: false # 行尾必须以\n结尾, 不知道为啥报这个错, 先忽略这个规则
+    active: true
     autoCorrect: true
     insertFinalNewLine: true
   ImportOrdering:
@@ -309,7 +309,7 @@ formatting:
     active: true
     autoCorrect: true
   NoWildcardImports:
-    active: false # 感觉是和AS的自动导包冲突, 先忽略这个规则
+    active: true
   PackageName:
     active: true
     autoCorrect: true
@@ -595,7 +595,7 @@ style:
   NestedClassesVisibility:
     active: false
   NewLineAtEndOfFile:
-    active: false # 行尾必须以\n结尾, 不知道为啥报这个错, 先忽略这个规则
+    active: true
   NoTabs:
     active: false
   OptionalAbstractKeyword:
@@ -684,6 +684,6 @@ style:
   VarCouldBeVal:
     active: false
   WildcardImport:
-    active: false # 感觉是和AS的自动导包冲突, 先忽略这个规则
+    active: true
     excludes: ['**/test/**', '**/androidTest/**', '**/commonTest/**', '**/jvmTest/**', '**/jsTest/**', '**/iosTest/**']
     excludeImports: ['java.util.*', 'kotlinx.android.synthetic.*']
