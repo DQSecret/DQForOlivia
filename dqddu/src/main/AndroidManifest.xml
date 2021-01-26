@@ -84,5 +84,17 @@
                     android:scheme="@string/intent_scheme" />
             </intent-filter>
         </activity>
+
+        <activity android:name=".coroutines.flow.shared.SharedFlowExampleActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <!-- eg: dqforolivia://www.dqforolivia.com/shared-flow-example -->
+                <data
+                    android:host="@string/intent_host"
+                    android:path="/shared-flow-example"
+                    android:scheme="@string/intent_scheme" />
+            </intent-filter>
+        </activity>
     </application>
 </manifest>

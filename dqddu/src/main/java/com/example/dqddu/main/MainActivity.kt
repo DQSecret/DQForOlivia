@@ -31,5 +31,9 @@ class MainActivity : BaseBindingActivity<ActivityMainBinding>() {
         binding.btnFlowStateFlowExample.setOnClickListener {
             startPageByScheme("state-flow-example")
         }
+        // 跳转到StateFlow示例
+        binding.btnFlowSharedFlowExample.setOnClickListener {
+            startPageByScheme("shared-flow-example")
+        }
     }
 }

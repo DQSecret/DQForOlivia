@@ -14,7 +14,7 @@ import kotlinx.coroutines.flow.*
 
 @ExperimentalCoroutinesApi
 @FlowPreview
-class StateFlowExampleActivityVM(val app: Application = BaseApp.app) : AndroidViewModel(app) {
+class StateFlowExampleActivityVM(app: Application = BaseApp.app) : AndroidViewModel(app) {
 
     companion object {
         const val DEBOUNCE_DURATION = 500L
