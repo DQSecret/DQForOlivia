@@ -13,4 +13,5 @@
     <string name="str_motion_layout_example_2">MotionLayout示例-2</string>
     <string name="str_flow_state_flow_example">StateFlow示例</string>
     <string name="str_flow_shared_flow_example">SharedFlow示例</string>
+    <string name="str_motion_layout_practice">MotionLayout-实践</string>
 </resources>
