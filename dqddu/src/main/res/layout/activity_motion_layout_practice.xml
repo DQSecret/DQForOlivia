@@ -1,32 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#D92D2118">
-
-    <!--    <androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
-    <!--        xmlns:app="http://schemas.android.com/apk/res-auto"-->
-    <!--        xmlns:tools="http://schemas.android.com/tools"-->
-    <!--        android:layout_width="match_parent"-->
-    <!--        android:layout_height="match_parent"-->
-    <!--        app:layoutDescription="@xml/activity_motion_layout_practice"-->
-    <!--        tools:background="@android:color/holo_purple">-->
-
-    <!--</androidx.constraintlayout.motion.widget.MotionLayout>-->
-
-
-    <!--    <androidx.constraintlayout.helper.widget.Layer-->
-    <!--        android:id="@+id/layer_action_bar"-->
-    <!--        android:layout_width="match_parent"-->
-    <!--        android:layout_height="48dp"-->
-    <!--        android:foregroundGravity="center"-->
-    <!--        app:constraint_referenced_ids="iv_action_bar_back"-->
-    <!--        app:layout_constraintEnd_toEndOf="parent"-->
-    <!--        app:layout_constraintStart_toStartOf="parent"-->
-    <!--        app:layout_constraintTop_toTopOf="parent"-->
-    <!--        tools:background="@android:color/holo_orange_dark" />-->
+    android:background="#666A1B9A"
+    app:layoutDescription="@xml/activity_motion_layout_practice">
 
     <ImageView
         android:id="@+id/iv_action_bar_back"
@@ -77,32 +56,53 @@
         android:layout_marginStart="16dp"
         android:scaleType="centerCrop"
         android:src="@mipmap/ic_launcher"
-        app:layout_constraintBottom_toTopOf="@id/guide_base_info"
+        app:layout_constraintBottom_toBottomOf="@id/guide_base_info"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/guide_action_bar"
+        app:layout_constraintTop_toTopOf="@id/guide_action_bar"
         tools:ignore="ContentDescription" />
 
     <TextView
         android:id="@+id/tv_movie_name_zh"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:layout_height="20dp"
         android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
+        android:gravity="start|center"
+        android:includeFontPadding="false"
         android:text="电影中文名"
         android:textColor="#FFFFFF"
         android:textSize="20sp"
         android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/iv_movie_poster"
         app:layout_constraintTop_toTopOf="@id/iv_movie_poster" />
 
     <TextView
         android:id="@+id/tv_movie_name_en"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="12dp"
+        android:layout_marginTop="4dp"
+        android:gravity="start|center"
+        android:includeFontPadding="false"
         android:text="电影英文名"
         android:textColor="#99FFFFFF"
         android:textSize="12sp"
         app:layout_constraintStart_toStartOf="@id/tv_movie_name_zh"
         app:layout_constraintTop_toBottomOf="@id/tv_movie_name_zh" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide_middle_info_hor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="93dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide_middle_info_ver"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="132dp" />
 
     <TextView
         android:id="@+id/tv_movie_label"
@@ -112,8 +112,8 @@
         android:textColor="#99FFFFFF"
         android:textSize="12sp"
         app:layout_constraintBottom_toTopOf="@id/tv_movie_details"
-        app:layout_constraintStart_toStartOf="@id/tv_movie_name_zh"
-        app:layout_constraintTop_toBottomOf="@id/tv_movie_name_en"
+        app:layout_constraintStart_toStartOf="@id/guide_middle_info_ver"
+        app:layout_constraintTop_toTopOf="@id/guide_middle_info_hor"
         app:layout_constraintVertical_chainStyle="packed" />
 
     <TextView
@@ -125,18 +125,17 @@
         android:textColor="#99FFFFFF"
         android:textSize="12sp"
         app:layout_constraintBottom_toTopOf="@id/toggle_group"
-        app:layout_constraintStart_toStartOf="@id/tv_movie_name_zh"
+        app:layout_constraintStart_toStartOf="@id/tv_movie_label"
         app:layout_constraintTop_toBottomOf="@id/tv_movie_label" />
 
     <com.google.android.material.button.MaterialButtonToggleGroup
         android:id="@+id/toggle_group"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         app:layout_constraintBottom_toBottomOf="@id/guide_base_info"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/iv_movie_poster"
+        app:layout_constraintStart_toStartOf="@id/guide_middle_info_ver"
         app:singleSelection="true"
         tools:checkedButton="@id/btn_wish">
 
@@ -179,4 +178,4 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_begin="198dp" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.motion.widget.MotionLayout>
