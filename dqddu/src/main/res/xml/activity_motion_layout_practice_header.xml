@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        motion:constraintSetEnd="@+id/end"
+        motion:constraintSetStart="@+id/start"
+        motion:duration="250"
+        motion:motionInterpolator="linear">
+        <!-- 这里备注一下:
+        touchAnchorSide=bottom意味着以下边为起始边
+        dragDirection=dragUp更像是一个校正值,只有向上时才有作用
+        onTouchUp则意味着手指松开后的规则,前提是走过50%的距离
+        -->
+        <!--        <OnSwipe-->
+        <!--            motion:dragDirection="dragUp"-->
+        <!--            motion:onTouchUp="decelerateAndComplete"-->
+        <!--            motion:touchAnchorSide="bottom" />-->
+    </Transition>
+
+    <ConstraintSet android:id="@+id/start">
+
+        <Constraint
+            android:id="@+id/tv_action_bar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            motion:layout_constraintBottom_toBottomOf="@id/guide_action_bar"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toTopOf="parent" />
+
+        <Constraint
+            android:id="@+id/iv_movie_poster"
+            android:layout_width="100dp"
+            android:layout_height="140dp"
+            android:layout_marginStart="16dp"
+            motion:layout_constraintBottom_toBottomOf="@id/guide_base_info"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toTopOf="@id/guide_action_bar" />
+
+        <Constraint
+            android:id="@+id/tv_movie_name_zh"
+            android:layout_width="0dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="4dp"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintStart_toEndOf="@id/iv_movie_poster"
+            motion:layout_constraintTop_toTopOf="@id/iv_movie_poster">
+            <CustomAttribute
+                motion:attributeName="textSize"
+                motion:customFloatValue="20" />
+        </Constraint>
+
+        <Constraint
+            android:id="@+id/tv_movie_name_en"
+            android:layout_width="wrap_content"
+            android:layout_height="12dp"
+            android:layout_marginTop="4dp"
+            motion:layout_constraintStart_toStartOf="@id/tv_movie_name_zh"
+            motion:layout_constraintTop_toBottomOf="@id/tv_movie_name_zh">
+
+            <CustomAttribute
+                motion:attributeName="textColor"
+                motion:customColorValue="#99FFFFFF" />
+        </Constraint>
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end">
+
+        <Constraint
+            android:id="@+id/tv_action_bar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="invisible" />
+
+        <Constraint
+            android:id="@+id/iv_movie_poster"
+            android:layout_width="25dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="6dp"
+            motion:layout_constraintBottom_toBottomOf="@id/guide_action_bar"
+            motion:layout_constraintStart_toEndOf="@id/iv_action_bar_back"
+            motion:layout_constraintTop_toTopOf="parent" />
+
+        <Constraint
+            android:id="@+id/tv_movie_name_zh"
+            android:layout_width="0dp"
+            android:layout_height="12dp"
+            android:layout_marginStart="6dp"
+            motion:layout_constraintBottom_toTopOf="@id/tv_movie_name_en"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintStart_toEndOf="@id/iv_movie_poster"
+            motion:layout_constraintTop_toTopOf="@id/iv_movie_poster">
+            <CustomAttribute
+                motion:attributeName="textSize"
+                motion:customFloatValue="12" />
+        </Constraint>
+
+        <Constraint
+            android:id="@+id/tv_movie_name_en"
+            android:layout_width="wrap_content"
+            android:layout_height="12dp"
+            motion:layout_constraintBottom_toBottomOf="@id/iv_movie_poster"
+            motion:layout_constraintStart_toStartOf="@id/tv_movie_name_zh"
+            motion:layout_constraintTop_toBottomOf="@id/tv_movie_name_zh">
+
+            <CustomAttribute
+                motion:attributeName="textColor"
+                motion:customColorValue="#FFFFFF" />
+        </Constraint>
+    </ConstraintSet>
+</MotionScene>

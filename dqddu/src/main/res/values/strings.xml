@@ -2,16 +2,4 @@
     <string name="app_name">DQDDU</string>
     <string name="intent_host">www.dqforolivia.com</string>
     <string name="intent_scheme">dqforolivia</string>
-    <string name="str_screenshots">屏幕截图检测</string>
-    <string name="str_network_example">网络示例</string>
-    <string name="str_mock_success">模拟Api成功</string>
-    <string name="str_mock_failure">模拟Api失败</string>
-    <string name="str_api_result_status">Api返回结果状态</string>
-    <string name="str_api_result_content">Api返回结果内容</string>
-    <string name="str_swipe_view_title">Swipe left to forward or archive and right to delete.</string>
-    <string name="str_motion_layout_example">MotionLayout示例</string>
-    <string name="str_motion_layout_example_2">MotionLayout示例-2</string>
-    <string name="str_flow_state_flow_example">StateFlow示例</string>
-    <string name="str_flow_shared_flow_example">SharedFlow示例</string>
-    <string name="str_motion_layout_practice">MotionLayout-实践</string>
 </resources>
