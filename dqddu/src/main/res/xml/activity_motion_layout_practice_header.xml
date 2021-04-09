@@ -42,22 +42,17 @@
         <Constraint
             android:id="@+id/tv_movie_name_zh"
             android:layout_width="0dp"
-            android:layout_height="20dp"
+            android:layout_height="24dp"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="4dp"
+            motion:autoSizeTextType="uniform"
             motion:layout_constraintEnd_toEndOf="parent"
             motion:layout_constraintStart_toEndOf="@id/iv_movie_poster"
-            motion:layout_constraintTop_toTopOf="@id/iv_movie_poster">
-            <CustomAttribute
-                motion:attributeName="textSize"
-                motion:customFloatValue="20" />
-        </Constraint>
+            motion:layout_constraintTop_toTopOf="@id/iv_movie_poster" />
 
         <Constraint
             android:id="@+id/tv_movie_name_en"
             android:layout_width="wrap_content"
-            android:layout_height="12dp"
-            android:layout_marginTop="4dp"
+            android:layout_height="wrap_content"
             motion:layout_constraintStart_toStartOf="@id/tv_movie_name_zh"
             motion:layout_constraintTop_toBottomOf="@id/tv_movie_name_zh">
 
@@ -87,21 +82,17 @@
         <Constraint
             android:id="@+id/tv_movie_name_zh"
             android:layout_width="0dp"
-            android:layout_height="12dp"
+            android:layout_height="16dp"
             android:layout_marginStart="6dp"
             motion:layout_constraintBottom_toTopOf="@id/tv_movie_name_en"
             motion:layout_constraintEnd_toEndOf="parent"
             motion:layout_constraintStart_toEndOf="@id/iv_movie_poster"
-            motion:layout_constraintTop_toTopOf="@id/iv_movie_poster">
-            <CustomAttribute
-                motion:attributeName="textSize"
-                motion:customFloatValue="12" />
-        </Constraint>
+            motion:layout_constraintTop_toTopOf="@id/iv_movie_poster" />
 
         <Constraint
             android:id="@+id/tv_movie_name_en"
             android:layout_width="wrap_content"
-            android:layout_height="12dp"
+            android:layout_height="wrap_content"
             motion:layout_constraintBottom_toBottomOf="@id/iv_movie_poster"
             motion:layout_constraintStart_toStartOf="@id/tv_movie_name_zh"
             motion:layout_constraintTop_toBottomOf="@id/tv_movie_name_zh">
