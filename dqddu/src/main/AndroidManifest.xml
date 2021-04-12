@@ -7,6 +7,8 @@
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <!-- 请求网络所需 -->
     <uses-permission android:name="android.permission.INTERNET" />
+    <!-- 振动权限 -->
+    <uses-permission android:name="android.permission.VIBRATE" />
 
     <application
         android:name=".base.BaseApp"
@@ -17,6 +19,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.DQForOlivia"
         tools:ignore="AllowBackup">
+
+        <!-- 外部的一个 WebView 的库: 方便打开链接 -->
+        <activity
+            android:name="com.thefinestartist.finestwebview.FinestWebViewActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="sensor"
+            android:theme="@style/FinestWebViewTheme.Light" />
 
         <activity android:name=".main.MainActivity">
             <intent-filter>
