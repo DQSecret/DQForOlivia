@@ -4,6 +4,13 @@
     <string name="str_api_result_status">Api返回结果状态</string>
     <string name="str_api_result_content">Api返回结果内容</string>
     <string name="str_swipe_view_title">Swipe left to forward or archive and right to delete.</string>
+    <string name="str_movie">电影</string>
+    <string name="str_movie_name_zh">电影中文名</string>
+    <string name="str_movie_name_en">电影英文名</string>
+    <string name="str_movie_label">动画 / 喜剧 / 奇幻</string>
+    <string name="str_movie_details">2019&#8211;07&#8211;26 中国大陆上映 / 2110分钟</string>
+    <string name="str_movie_wish">想看</string>
+    <string name="str_movie_seen">看过</string>
     <string name="str_large_text">
         "Material is the metaphor.\n\n"
 

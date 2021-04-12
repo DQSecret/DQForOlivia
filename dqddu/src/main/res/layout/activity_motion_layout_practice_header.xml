@@ -24,7 +24,7 @@
         android:id="@+id/tv_action_bar_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="电影"
+        android:text="@string/str_movie"
         android:textColor="#66FFFFFF"
         android:textSize="16sp"
         android:textStyle="bold"
@@ -68,7 +68,7 @@
         android:layout_width="0dp"
         android:layout_height="24dp"
         android:layout_marginStart="16dp"
-        android:text="电影中文名"
+        android:text="@string/str_movie_name_zh"
         android:textColor="#FFFFFF"
         android:textStyle="bold"
         app:autoSizeTextType="uniform"
@@ -80,36 +80,23 @@
         android:id="@+id/tv_movie_name_en"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="电影英文名"
+        android:text="@string/str_movie_name_en"
         android:textColor="#99FFFFFF"
         android:textSize="12sp"
         app:layout_constraintStart_toStartOf="@id/tv_movie_name_zh"
         app:layout_constraintTop_toBottomOf="@id/tv_movie_name_zh" />
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guide_middle_info_hor"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_begin="95dp" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guide_middle_info_ver"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_begin="132dp" />
-
     <TextView
         android:id="@+id/tv_movie_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="动画 / 喜剧 / 奇幻"
+        android:layout_marginStart="16dp"
+        android:text="@string/str_movie_label"
         android:textColor="#99FFFFFF"
         android:textSize="12sp"
         app:layout_constraintBottom_toTopOf="@id/tv_movie_details"
-        app:layout_constraintStart_toStartOf="@id/guide_middle_info_ver"
-        app:layout_constraintTop_toTopOf="@id/guide_middle_info_hor"
+        app:layout_constraintStart_toEndOf="@id/iv_movie_poster"
+        app:layout_constraintTop_toBottomOf="@id/tv_movie_name_en"
         app:layout_constraintVertical_chainStyle="packed" />
 
     <TextView
@@ -117,7 +104,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="3dp"
-        android:text="2019-07-26 中国大陆上映 /2110分钟"
+        android:text="@string/str_movie_details"
         android:textColor="#99FFFFFF"
         android:textSize="12sp"
         app:layout_constraintBottom_toTopOf="@id/toggle_group"
@@ -128,10 +115,11 @@
         android:id="@+id/toggle_group"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         app:layout_constraintBottom_toBottomOf="@id/guide_base_info"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@id/guide_middle_info_ver"
+        app:layout_constraintStart_toEndOf="@id/iv_movie_poster"
         app:singleSelection="true"
         tools:checkedButton="@id/btn_wish">
 
@@ -141,7 +129,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="想看"
+            android:text="@string/str_movie_wish"
             android:textColor="@color/selector_wish_txt_color"
             android:textSize="14sp"
             app:icon="@drawable/ic_favorite_16"
@@ -157,7 +145,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="看过"
+            android:text="@string/str_movie_seen"
             android:textColor="@color/selector_seen_txt_color"
             android:textSize="14sp"
             app:icon="@drawable/ic_star_16"

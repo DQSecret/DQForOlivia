@@ -21,7 +21,7 @@
     <ConstraintSet android:id="@+id/start">
 
         <Constraint
-            android:id="@+id/tv_action_bar_title"
+            android:id="@id/tv_action_bar_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:visibility="visible"
@@ -31,7 +31,7 @@
             motion:layout_constraintTop_toTopOf="parent" />
 
         <Constraint
-            android:id="@+id/iv_movie_poster"
+            android:id="@id/iv_movie_poster"
             android:layout_width="100dp"
             android:layout_height="140dp"
             android:layout_marginStart="16dp"
@@ -40,7 +40,7 @@
             motion:layout_constraintTop_toTopOf="@id/guide_action_bar" />
 
         <Constraint
-            android:id="@+id/tv_movie_name_zh"
+            android:id="@id/tv_movie_name_zh"
             android:layout_width="0dp"
             android:layout_height="24dp"
             android:layout_marginStart="16dp"
@@ -50,7 +50,7 @@
             motion:layout_constraintTop_toTopOf="@id/iv_movie_poster" />
 
         <Constraint
-            android:id="@+id/tv_movie_name_en"
+            android:id="@id/tv_movie_name_en"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             motion:layout_constraintStart_toStartOf="@id/tv_movie_name_zh"
@@ -65,13 +65,13 @@
     <ConstraintSet android:id="@+id/end">
 
         <Constraint
-            android:id="@+id/tv_action_bar_title"
+            android:id="@id/tv_action_bar_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:visibility="invisible" />
 
         <Constraint
-            android:id="@+id/iv_movie_poster"
+            android:id="@id/iv_movie_poster"
             android:layout_width="25dp"
             android:layout_height="35dp"
             android:layout_marginStart="6dp"
@@ -80,7 +80,7 @@
             motion:layout_constraintTop_toTopOf="parent" />
 
         <Constraint
-            android:id="@+id/tv_movie_name_zh"
+            android:id="@id/tv_movie_name_zh"
             android:layout_width="0dp"
             android:layout_height="16dp"
             android:layout_marginStart="6dp"
@@ -90,7 +90,7 @@
             motion:layout_constraintTop_toTopOf="@id/iv_movie_poster" />
 
         <Constraint
-            android:id="@+id/tv_movie_name_en"
+            android:id="@id/tv_movie_name_en"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             motion:layout_constraintBottom_toBottomOf="@id/iv_movie_poster"
