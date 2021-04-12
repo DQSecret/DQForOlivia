@@ -35,5 +35,9 @@ class MainActivity : BaseBindingActivity<ActivityMainBinding>() {
         binding.btnFlowSharedFlowExample.setOnClickListener {
             startPageByScheme("shared-flow-example")
         }
+        // 跳转到MotionLayout实践
+        binding.btnMotionLayoutPractice.setOnClickListener {
+            startPageByScheme("motion-layout-practice")
+        }
     }
 }
