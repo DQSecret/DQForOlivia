@@ -105,5 +105,17 @@
                     android:scheme="@string/intent_scheme" />
             </intent-filter>
         </activity>
+
+        <activity android:name=".motionlayout.practice.MotionLayoutPracticeActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <!-- eg: dqforolivia://www.dqforolivia.com/motion-layout-practice -->
+                <data
+                    android:host="@string/intent_host"
+                    android:path="/motion-layout-practice"
+                    android:scheme="@string/intent_scheme" />
+            </intent-filter>
+        </activity>
     </application>
 </manifest>
