@@ -131,5 +131,29 @@
                     android:scheme="@string/intent_scheme" />
             </intent-filter>
         </activity>
+
+        <activity android:name=".list.ConcatAdapterStudyActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <!-- eg: dqforolivia://www.dqforolivia.com/concat-adapter-study -->
+                <data
+                    android:host="@string/intent_host"
+                    android:path="/concat-adapter-study"
+                    android:scheme="@string/intent_scheme" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".list.Paging3StudyActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <!-- eg: dqforolivia://www.dqforolivia.com/paging3-study -->
+                <data
+                    android:host="@string/intent_host"
+                    android:path="/paging3-study"
+                    android:scheme="@string/intent_scheme" />
+            </intent-filter>
+        </activity>
     </application>
 </manifest>

@@ -43,5 +43,13 @@ class MainActivity : BaseBindingActivity<ActivityMainBinding>() {
         binding.btnMotionLayoutPractice2.setOnClickListener {
             startPageByScheme("motion-layout-practice-2")
         }
+        // 跳转到ConcatAdapter学习
+        binding.btnConcatAdapterStudy.setOnClickListener {
+            startPageByScheme("concat-adapter-study")
+        }
+        // 跳转到Paging3学习
+        binding.btnPaging3Study.setOnClickListener {
+            startPageByScheme("paging3-study")
+        }
     }
 }
