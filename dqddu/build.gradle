@@ -120,5 +120,11 @@ dependencies {
 
     // WebView的一个库
     implementation 'com.thefinestartist:finestwebview:1.2.7'
+    // WebView的一个库 ->>> 需要使用这个库
     implementation "androidx.swiperefreshlayout:swiperefreshlayout:1.1.0"
+
+    // Glide相关
+    def glide_version = "4.12.0"
+    // noinspection GradleDependency // 无视这个新版本提醒
+    implementation "com.github.bumptech.glide:glide:$glide_version"
 }
