@@ -39,5 +39,9 @@ class MainActivity : BaseBindingActivity<ActivityMainBinding>() {
         binding.btnMotionLayoutPractice.setOnClickListener {
             startPageByScheme("motion-layout-practice")
         }
+        // 跳转到MotionLayout实践2
+        binding.btnMotionLayoutPractice2.setOnClickListener {
+            startPageByScheme("motion-layout-practice-2")
+        }
     }
 }
