@@ -5,8 +5,13 @@
     android:id="@+id/motion"
     android:layout_width="match_parent"
     android:layout_height="44dp"
-    android:background="#3F51B5"
     app:layoutDescription="@xml/view_title_switch_scene">
+
+    <View
+        android:id="@+id/view_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:background="#3F51B5" />
 
     <ImageView
         android:id="@+id/iv_action_bar_back"

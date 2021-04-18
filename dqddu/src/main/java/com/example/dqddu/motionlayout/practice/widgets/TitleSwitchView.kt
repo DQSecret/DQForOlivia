@@ -2,6 +2,7 @@ package com.example.dqddu.motionlayout.practice.widgets
 
 import android.content.Context
 import android.util.AttributeSet
+import android.util.Log
 import android.view.LayoutInflater
 import androidx.constraintlayout.motion.widget.MotionLayout
 import androidx.constraintlayout.widget.ConstraintLayout
@@ -55,5 +56,13 @@ class TitleSwitchView @JvmOverloads constructor(
      */
     fun toStart() {
         motion.transitionToStart()
+    }
+
+    /**
+     * 输入进度, 改变透明度
+     */
+    fun setProgress(progress: Float) {
+        motion.progress = progress
+        Log.d("DQ", "setProgress: progress=${progress}")
     }
 }
