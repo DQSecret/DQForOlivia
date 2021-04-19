@@ -2,67 +2,55 @@ package com.example.dqddu.motionlayout.practice.widgets
 
 import android.content.Context
 import android.util.AttributeSet
-import android.util.Log
 import android.view.LayoutInflater
 import androidx.constraintlayout.motion.widget.MotionLayout
+import androidx.constraintlayout.motion.widget.TransitionAdapter
 import androidx.constraintlayout.widget.ConstraintLayout
-import com.example.dqddu.R
-import kotlinx.coroutines.MainScope
-import kotlinx.coroutines.delay
-import kotlinx.coroutines.launch
+import com.example.dqddu.databinding.ViewTitleSwitchBinding
 
 /**
- * 该类基本功能描述
+ * 主标题和副标题(快速滚动) - 目前用于[TitleSwitchBarView]
  *
  * @author DQDana For Olivia
- * @since 4/16/21 6:10 PM
- * @see <a href="文章">外链描述</a>
+ * @since 4/19/21 2:55 PM
+ * @see <a href="无">无</a>
  */
 class TitleSwitchView @JvmOverloads constructor(
     context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0
 ) : ConstraintLayout(context, attrs, defStyleAttr) {
 
-    private lateinit var motion: MotionLayout
+    private val binding =
+        ViewTitleSwitchBinding.inflate(LayoutInflater.from(getContext()), this, true)
 
-    init {
-        LayoutInflater.from(context).inflate(R.layout.view_title_switch, this)
-    }
+    private var transitioning = false
 
     override fun onFinishInflate() {
         super.onFinishInflate()
-
-        motion = findViewById(R.id.motion)
-
-        setOnClickListener {
-            MainScope().launch {
-                for (i in 1..100) {
-                    delay(100)
-                    motion.progress = i.toFloat() / 100
-                    println("DQ + ${i.toFloat() / 100}")
-                }
+        binding.motion.setTransitionListener(object : TransitionAdapter() {
+            override fun onTransitionCompleted(motionLayout: MotionLayout?, currentId: Int) {
+                super.onTransitionCompleted(motionLayout, currentId)
+                transitioning = false
             }
-        }
+        })
     }
 
     /**
      * 让外部来触发
      */
     fun toEnd() {
-        motion.transitionToEnd()
+        if (!transitioning && binding.motion.currentState != binding.motion.endState) {
+            binding.motion.transitionToEnd()
+            transitioning = true
+        }
     }
 
     /**
      * 让外部来触发
      */
     fun toStart() {
-        motion.transitionToStart()
-    }
-
-    /**
-     * 输入进度, 改变透明度
-     */
-    fun setProgress(progress: Float) {
-        motion.progress = progress
-        Log.d("DQ", "setProgress: progress=${progress}")
+        if (!transitioning && binding.motion.currentState != binding.motion.startState) {
+            binding.motion.transitionToStart()
+            transitioning = true
+        }
     }
 }
