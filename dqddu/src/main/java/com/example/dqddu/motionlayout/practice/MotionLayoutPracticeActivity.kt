@@ -4,7 +4,7 @@ import com.example.dqddu.base.BaseBindingActivity
 import com.example.dqddu.databinding.ActivityMotionLayoutPracticeBinding
 
 /**
- * MotionLayout的时间 - 模拟猫眼电影详情页的头部
+ * MotionLayout的实践 - 模拟猫眼电影详情页的头部
  *
  * @author DQDana For Olivia
  * @since 4/8/21 5:10 PM
