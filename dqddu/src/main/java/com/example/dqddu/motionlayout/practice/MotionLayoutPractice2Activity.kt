@@ -6,6 +6,7 @@ import android.util.TypedValue
 import androidx.core.graphics.toColorInt
 import com.example.dqddu.base.BaseBindingActivity
 import com.example.dqddu.databinding.ActivityMotionLayoutPractice2Binding
+import com.example.dqddu.motionlayout.practice.helper.StatusBarUtil
 import com.google.android.material.appbar.AppBarLayout
 import kotlin.math.roundToInt
 
@@ -28,6 +29,8 @@ class MotionLayoutPractice2Activity : BaseBindingActivity<ActivityMotionLayoutPr
             setProgressViewOffset(true, 15.dp, 64.dp)
             setColorSchemeColors("#f34d41".toColorInt())
         }
+        // 状态栏透明
+        StatusBarUtil.setTranslucentForCoordinatorLayout(this, 0)
     }
 
     override fun onDestroy() {
@@ -49,6 +52,12 @@ class MotionLayoutPractice2Activity : BaseBindingActivity<ActivityMotionLayoutPr
         // 这里要计算高度,之后开始动画
         val progress = (-verticalOffset) / (tvIntroTop - viewTitleSwitchHeight).toFloat()
         binding.viewTitleSwitchBar.setProgress(progress)
+        // 状态栏的黑白模式
+        if (progress > 0.8) {
+            StatusBarUtil.setLightMode(this)
+        } else {
+            StatusBarUtil.setDarkMode(this)
+        }
         // 状态变化 -> 是否可以刷新
         if (verticalOffset == 0) {
             binding.layoutRefresh.isEnabled = true

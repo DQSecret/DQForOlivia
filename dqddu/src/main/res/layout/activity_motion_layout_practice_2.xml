@@ -21,7 +21,7 @@
                 android:id="@+id/layout_collapsing"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:minHeight="44dp"
+                android:minHeight="72dp"
                 app:layout_scrollFlags="scroll|exitUntilCollapsed|enterAlwaysCollapsed"
                 app:statusBarScrim="@android:color/transparent">
 
