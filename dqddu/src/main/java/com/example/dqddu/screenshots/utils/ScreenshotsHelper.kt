@@ -8,8 +8,8 @@ import android.os.Build
 import android.os.Handler
 import android.os.Looper
 import android.provider.MediaStore
-import android.widget.Toast
 import androidx.lifecycle.MutableLiveData
+import com.example.dqddu.ext.toast
 
 /**
  * 监听屏幕截屏的事件
@@ -86,7 +86,7 @@ class ScreenshotsHelper(private val context: Context) {
                     relativePath.contains("screenshot", true)
                 ) {
                     // do something
-                    Toast.makeText(context, name, Toast.LENGTH_LONG).show()
+                    name.toast()
                     screenshotObs.postValue(name)
                 }
             }
@@ -108,7 +108,7 @@ class ScreenshotsHelper(private val context: Context) {
                 val path = cursor.getString(dataColumn)
                 if (path.contains("screenshot", true)) {
                     // do something
-                    Toast.makeText(context, path, Toast.LENGTH_LONG).show()
+                    path.toast()
                     screenshotObs.postValue(path)
                 }
             }

@@ -6,14 +6,13 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.widget.TextView
-import android.widget.Toast
 import androidx.constraintlayout.motion.widget.MotionLayout
 import androidx.constraintlayout.motion.widget.TransitionAdapter
 import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.lifecycleScope
 import com.example.dqddu.R
-import com.example.dqddu.base.BaseApp
 import com.example.dqddu.databinding.ViewCarouselMotionLayoutBinding
+import com.example.dqddu.ext.toast
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
@@ -111,7 +110,4 @@ class CarouselView @JvmOverloads constructor(
             }
         }
     }
-
-    private fun CharSequence.toast() =
-        Toast.makeText(BaseApp.app.applicationContext, this, Toast.LENGTH_SHORT).show()
 }
