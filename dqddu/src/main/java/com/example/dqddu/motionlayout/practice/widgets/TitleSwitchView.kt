@@ -16,7 +16,9 @@ import com.example.dqddu.databinding.ViewTitleSwitchBinding
  * @see <a href="无">无</a>
  */
 class TitleSwitchView @JvmOverloads constructor(
-    context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0
+    context: Context,
+    attrs: AttributeSet? = null,
+    defStyleAttr: Int = 0
 ) : ConstraintLayout(context, attrs, defStyleAttr) {
 
     private val binding =

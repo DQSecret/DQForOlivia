@@ -13,5 +13,4 @@ import com.example.dqddu.databinding.ActivityMotionLayoutPracticeBinding
 class MotionLayoutPracticeActivity : BaseBindingActivity<ActivityMotionLayoutPracticeBinding>() {
 
     override fun initBinding() = ActivityMotionLayoutPracticeBinding.inflate(layoutInflater)
-
 }

@@ -1,3 +1,5 @@
+@file:Suppress("NoWildcardImports")
+
 package com.example.dqddu.ext
 
 import android.content.Context
@@ -30,10 +32,11 @@ val deviceName: String
     get() {
         val manufacturer = Build.MANUFACTURER
         val model = Build.MODEL
-        return if (model.startsWith(manufacturer))
+        return if (model.startsWith(manufacturer)) {
             model.capitalize(Locale.getDefault())
-        else
+        } else {
             manufacturer.capitalize(Locale.getDefault()) + " " + model
+        }
     }
 
 /**

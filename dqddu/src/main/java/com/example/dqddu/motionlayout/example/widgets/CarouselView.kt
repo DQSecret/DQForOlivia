@@ -94,7 +94,7 @@ class CarouselView @JvmOverloads constructor(
         val progress = binding.viewCarouselRoot.progress
         binding.viewCarouselRoot.progress = progress
         // 2. 提示用户
-        maps[this]?.toast()
+        toast(maps[this])
         Log.d("DQ", "onPause: 在${progress}时被人为点击了, 暂停4s.")
         // 3. 延迟4s恢复
         context.takeIf {

@@ -1,3 +1,5 @@
+@file:Suppress("MaxLineLength")
+
 package com.example.dqddu.base
 
 import android.os.Bundle
@@ -100,7 +102,7 @@ class ViewBindingExtTestActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.tvContent.setOnClickListener {
-            this@ViewBindingExtTestActivity::class.simpleName.toString().toast()
+            toast(this@ViewBindingExtTestActivity::class.simpleName)
         }
     }
 }
@@ -115,7 +117,7 @@ class ViewBindingExtTestFragment : Fragment(R.layout.fragment_viewbinding_ext_te
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.tvContent.setOnClickListener {
-            this@ViewBindingExtTestFragment::class.simpleName.toString().toast()
+            toast(this@ViewBindingExtTestFragment::class.simpleName)
         }
     }
 }

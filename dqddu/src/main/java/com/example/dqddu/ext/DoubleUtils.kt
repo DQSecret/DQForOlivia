@@ -10,9 +10,11 @@ import java.text.DecimalFormat
  * @see <a href="https://betterprogramming.pub/22-kotlin-extensions-for-cleaner-code-acadcbd49357">文章</a>
  */
 
+private const val GROUPING_SIZE = 3
+
 fun Double.toPrice(): String {
     val pattern = "#,###.00"
     val decimalFormat = DecimalFormat(pattern)
-    decimalFormat.groupingSize = 3
+    decimalFormat.groupingSize = GROUPING_SIZE
     return "€" + decimalFormat.format(this)
 }

@@ -1,3 +1,5 @@
+@file:Suppress("ReturnCount")
+
 package com.example.dqddu.ext
 
 import android.location.Location

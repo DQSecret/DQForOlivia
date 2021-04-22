@@ -1,3 +1,5 @@
+@file:Suppress("TooGenericExceptionCaught")
+
 package com.example.dqddu.ext
 
 import android.content.ActivityNotFoundException
@@ -17,11 +19,13 @@ import com.thefinestartist.finestwebview.FinestWebView
 
 val String.asUri: Uri?
     get() = try {
-        if (URLUtil.isValidUrl(this))
+        if (URLUtil.isValidUrl(this)) {
             Uri.parse(this)
-        else
+        } else {
             null
-    } catch (e: Exception) {
+        }
+    } catch (e: NullPointerException) {
+        e.printStackTrace()
         null
     }
 

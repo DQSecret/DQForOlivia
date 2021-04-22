@@ -8,6 +8,8 @@ package com.example.dqddu.ext
  * @see <a href="https://betterprogramming.pub/10-useful-kotlin-string-extensions-46772b653f71">文章</a>
  */
 
+private const val DIGITS = 4
+
 /**
  * 输入兑换码时, 需要每四位加一空格, 方便校验
  */
@@ -16,7 +18,7 @@ val String.creditCardFormatted: String
         val preparedString = replace(" ", "").trim()
         val result = StringBuilder()
         for (i in preparedString.indices) {
-            if (i % 4 == 0 && i != 0) {
+            if (i % DIGITS == 0 && i != 0) {
                 result.append(" ")
             }
             result.append(preparedString[i])

@@ -1,15 +1,31 @@
 package com.example.dqddu.ext
 
+import android.content.Context
+import android.view.View
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.Fragment
 import com.example.dqddu.base.BaseApp
 
 /**
- * 简单的 Toast 弹出
+ * Toast 相关扩展函数汇总
  *
  * @author DQDana For Olivia
- * @since 4/22/21 4:24 PM
- * @see <a href="无">无</a>
+ * @since 4/13/21 7:59 PM
  */
 
-fun CharSequence.toast() =
-    Toast.makeText(BaseApp.app.applicationContext, this, Toast.LENGTH_SHORT).show()
+fun AppCompatActivity.toast(msg: String?) {
+    toast(this, msg)
+}
+
+fun Fragment.toast(msg: String?) {
+    toast(requireContext(), msg)
+}
+
+fun View.toast(msg: String?) {
+    toast(context, msg)
+}
+
+fun toast(context: Context = BaseApp.app.applicationContext, msg: String?) {
+    Toast.makeText(context, msg.toString(), Toast.LENGTH_SHORT).show()
+}

@@ -29,9 +29,9 @@ fun String.isEmailValid(): Boolean {
 fun String.formatPhoneNumber(context: Context, region: String): String? {
     val phoneNumberKit = PhoneNumberUtil.createInstance(context)
     val number = phoneNumberKit.parse(this, region)
-    if (!phoneNumberKit.isValidNumber(number))
+    if (!phoneNumberKit.isValidNumber(number)) {
         return null
-
+    }
     return phoneNumberKit.format(number, PhoneNumberUtil.PhoneNumberFormat.INTERNATIONAL)
 }
 

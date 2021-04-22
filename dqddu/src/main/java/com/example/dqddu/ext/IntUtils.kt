@@ -1,3 +1,5 @@
+@file:Suppress("NoWildcardImports")
+
 package com.example.dqddu.ext
 
 import java.util.*
@@ -10,10 +12,12 @@ import java.util.*
  * @see <a href="https://betterprogramming.pub/22-kotlin-extensions-for-cleaner-code-acadcbd49357">文章</a>
  */
 
-fun Int.centsToDollars(): Double = this.toDouble() / 100.0
+private const val UNIT = 100
+
+fun Int.centsToDollars(): Double = this.toDouble() / UNIT
 
 fun Int.centsToDollarsFormat(currency: String): String {
-    val dollars = this / 100
-    val cents = this % 100
+    val dollars = this / UNIT
+    val cents = this % UNIT
     return String.format(Locale.US, "%s%d.%02d", currency, dollars, cents)
 }

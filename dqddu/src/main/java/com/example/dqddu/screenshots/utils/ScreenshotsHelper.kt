@@ -86,7 +86,7 @@ class ScreenshotsHelper(private val context: Context) {
                     relativePath.contains("screenshot", true)
                 ) {
                     // do something
-                    name.toast()
+                    toast(msg = name)
                     screenshotObs.postValue(name)
                 }
             }
@@ -108,7 +108,7 @@ class ScreenshotsHelper(private val context: Context) {
                 val path = cursor.getString(dataColumn)
                 if (path.contains("screenshot", true)) {
                     // do something
-                    path.toast()
+                    toast(msg = path)
                     screenshotObs.postValue(path)
                 }
             }

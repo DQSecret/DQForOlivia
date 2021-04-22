@@ -1,3 +1,5 @@
+@file:Suppress("NoWildcardImports")
+
 package com.example.dqddu.ext
 
 import java.text.ParseException
@@ -12,10 +14,12 @@ import java.util.*
  * @see <a href="https://betterprogramming.pub/22-kotlin-extensions-for-cleaner-code-acadcbd49357">文章</a>
  */
 
-fun Int.toDate(): Date = Date(this.toLong() * 1000L)
+private const val UNIT: Long = 1000L
+
+fun Int.toDate(): Date = Date(this.toLong() * UNIT)
 
 val Int.asDate: Date
-    get() = Date(this.toLong() * 1000L)
+    get() = Date(this.toLong() * UNIT)
 
 fun String.toDate(format: String): Date? {
     val dateFormatter = SimpleDateFormat(format, Locale.US)

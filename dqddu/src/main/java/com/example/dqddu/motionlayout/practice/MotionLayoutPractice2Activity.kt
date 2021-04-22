@@ -1,14 +1,12 @@
 package com.example.dqddu.motionlayout.practice
 
-import android.content.res.Resources
 import android.os.Bundle
-import android.util.TypedValue
 import androidx.core.graphics.toColorInt
 import com.example.dqddu.base.BaseBindingActivity
 import com.example.dqddu.databinding.ActivityMotionLayoutPractice2Binding
+import com.example.dqddu.ext.dp
 import com.example.dqddu.motionlayout.practice.helper.StatusBarUtil
 import com.google.android.material.appbar.AppBarLayout
-import kotlin.math.roundToInt
 
 /**
  * MotionLayout的实践2 - 话题头部
@@ -20,13 +18,19 @@ import kotlin.math.roundToInt
 class MotionLayoutPractice2Activity : BaseBindingActivity<ActivityMotionLayoutPractice2Binding>(),
     AppBarLayout.OnOffsetChangedListener {
 
+    companion object {
+        val mOriginalOffsetTop = 15.dp
+        val mSpinnerOffsetEnd = 64.dp
+        const val mLightOrDarkModeThreshold = 0.8
+    }
+
     override fun initBinding() = ActivityMotionLayoutPractice2Binding.inflate(layoutInflater)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding.layoutAppBar.addOnOffsetChangedListener(this)
         binding.layoutRefresh.apply {
-            setProgressViewOffset(true, 15.dp, 64.dp)
+            setProgressViewOffset(true, mOriginalOffsetTop, mSpinnerOffsetEnd)
             setColorSchemeColors("#f34d41".toColorInt())
         }
         // 状态栏透明
@@ -38,8 +42,8 @@ class MotionLayoutPractice2Activity : BaseBindingActivity<ActivityMotionLayoutPr
         binding.layoutAppBar.removeOnOffsetChangedListener(this)
     }
 
-    var tvIntroTop = -1
-    var viewTitleSwitchHeight = -1
+    private var tvIntroTop = -1
+    private var viewTitleSwitchHeight = -1
 
     override fun onOffsetChanged(appBarLayout: AppBarLayout?, verticalOffset: Int) {
         // 获取高度
@@ -53,7 +57,7 @@ class MotionLayoutPractice2Activity : BaseBindingActivity<ActivityMotionLayoutPr
         val progress = (-verticalOffset) / (tvIntroTop - viewTitleSwitchHeight).toFloat()
         binding.viewTitleSwitchBar.setProgress(progress)
         // 状态栏的黑白模式
-        if (progress > 0.8) {
+        if (progress > mLightOrDarkModeThreshold) {
             StatusBarUtil.setLightMode(this)
         } else {
             StatusBarUtil.setDarkMode(this)
@@ -66,11 +70,4 @@ class MotionLayoutPractice2Activity : BaseBindingActivity<ActivityMotionLayoutPr
             binding.layoutRefresh.isEnabled = false
         }
     }
-
-    private val Number.dp: Int
-        get() = TypedValue.applyDimension(
-            TypedValue.COMPLEX_UNIT_DIP,
-            this.toFloat(),
-            Resources.getSystem().displayMetrics
-        ).roundToInt()
 }

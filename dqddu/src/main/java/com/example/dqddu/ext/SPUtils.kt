@@ -19,8 +19,9 @@ fun String.save(
     now: Boolean = false
 ) {
     val sp = applicationContext.getSharedPreferences(this, Context.MODE_PRIVATE).edit()
-    if (clear)
+    if (clear) {
         sp.clear()
+    }
     value.keys.forEach { key ->
         val v = value[key]
         if (v != null) {
@@ -33,10 +34,11 @@ fun String.save(
             }
         }
     }
-    if (now)
+    if (now) {
         sp.commit()
-    else
+    } else {
         sp.apply()
+    }
 }
 
 fun String.load(applicationContext: Context): Map<String, Any> {
@@ -45,8 +47,9 @@ fun String.load(applicationContext: Context): Map<String, Any> {
     val result = hashMapOf<String, Any>()
     keys.map { key ->
         val v = sp.all[key]
-        if (v != null)
+        if (v != null) {
             result[key] = v
+        }
     }
     return result
 }
