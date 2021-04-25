@@ -3,9 +3,12 @@ package com.example.dqddu.list.concat
 import android.os.Bundle
 import androidx.recyclerview.widget.ConcatAdapter
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.example.dqddu.base.BaseBindingActivity
 import com.example.dqddu.databinding.ActivityConcatAdapterStudyBinding
+import com.example.dqddu.ext.dp
 import com.example.dqddu.ext.toast
+import kotlin.math.max
 
 /**
  * 使用 ConcatAdapter 来分治长列表
@@ -25,6 +28,7 @@ class ConcatAdapterStudyActivity : BaseBindingActivity<ActivityConcatAdapterStud
 
     private fun initView() {
         setupAdapters()
+        setupListener()
     }
 
     private fun setupAdapters() {
@@ -43,5 +47,25 @@ class ConcatAdapterStudyActivity : BaseBindingActivity<ActivityConcatAdapterStud
         concatAdapter.addAdapter(introductionAdapter)
         concatAdapter.addAdapter(actorsAdapter)
         binding.recycler.adapter = concatAdapter
+    }
+
+    private var mMaxScroll = 172.dp
+    private var mScrollY = -1F
+
+    private fun setupListener() {
+        binding.recycler.addOnScrollListener(object : RecyclerView.OnScrollListener() {
+            override fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {
+                super.onScrolled(recyclerView, dx, dy)
+                mScrollY += dy.toFloat()
+                mScrollY = max(mScrollY, 0F)
+                val progress = mScrollY / mMaxScroll
+                binding.viewProgress.setProgress(progress)
+            }
+        })
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        binding.recycler.clearOnScrollListeners()
     }
 }
