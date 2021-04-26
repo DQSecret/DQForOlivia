@@ -9,5 +9,5 @@
 
     <include layout="@layout/activity_motion_layout_practice_header" />
 
-    <include layout="@layout/content_scrolling" />
+    <include layout="@layout/activity_motion_layout_practice_content_scrolling" />
 </androidx.constraintlayout.motion.widget.MotionLayout>

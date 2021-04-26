@@ -1,6 +1,10 @@
-package com.example.dqddu.list
+package com.example.dqddu.list.paging3.view
+
 
 import android.os.Bundle
+import androidx.navigation.findNavController
+import androidx.navigation.ui.setupWithNavController
+import com.example.dqddu.R
 import com.example.dqddu.base.BaseBindingActivity
 import com.example.dqddu.databinding.ActivityPaging3StudyBinding
 
@@ -17,6 +21,12 @@ class Paging3StudyActivity : BaseBindingActivity<ActivityPaging3StudyBinding>() 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding.tvContent.text = this::class.simpleName.toString()
+        setupView()
+    }
+
+    private fun setupView() {
+        binding.viewBottomNavigation.setupWithNavController(
+            findNavController(R.id.fragment_nav_host)
+        )
     }
 }

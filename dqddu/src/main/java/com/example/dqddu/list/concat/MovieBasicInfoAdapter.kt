@@ -4,7 +4,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.example.dqddu.databinding.ItemMovieBasicInfoBinding
+import com.example.dqddu.databinding.VhConcatMovieBasicInfoBinding
 import com.example.dqddu.ext.dp
 
 class MovieBasicInfoAdapter(
@@ -15,7 +15,7 @@ class MovieBasicInfoAdapter(
     override fun getItemCount() = 1
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): VH =
-        ItemMovieBasicInfoBinding
+        VhConcatMovieBasicInfoBinding
             .inflate(LayoutInflater.from(parent.context), parent, false)
             .let { VH(it) }
 
@@ -23,7 +23,7 @@ class MovieBasicInfoAdapter(
         holder.bind(movie, callback)
 
     class VH(
-        private val binding: ItemMovieBasicInfoBinding
+        private val binding: VhConcatMovieBasicInfoBinding
     ) : RecyclerView.ViewHolder(binding.root) {
 
         fun bind(movie: Movie, callback: (Movie) -> Unit) =

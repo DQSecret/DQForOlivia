@@ -3,7 +3,7 @@ package com.example.dqddu.list.concat
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.example.dqddu.databinding.ItemMovieIntroductionBinding
+import com.example.dqddu.databinding.VhConcatMovieIntroductionBinding
 
 class MovieIntroductionAdapter(
     private val movie: Movie,
@@ -13,7 +13,7 @@ class MovieIntroductionAdapter(
     override fun getItemCount() = 1
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): VH =
-        ItemMovieIntroductionBinding
+        VhConcatMovieIntroductionBinding
             .inflate(LayoutInflater.from(parent.context), parent, false)
             .let { VH(it) }
 
@@ -21,7 +21,7 @@ class MovieIntroductionAdapter(
         holder.bind(movie, callback)
 
     class VH(
-        private val binding: ItemMovieIntroductionBinding
+        private val binding: VhConcatMovieIntroductionBinding
     ) : RecyclerView.ViewHolder(binding.root) {
 
         fun bind(movie: Movie, callback: (Movie) -> Unit) =

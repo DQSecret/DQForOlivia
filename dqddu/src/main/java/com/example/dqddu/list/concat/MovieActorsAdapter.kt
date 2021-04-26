@@ -4,7 +4,7 @@ import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.example.dqddu.databinding.ItemMovieActorsBinding
+import com.example.dqddu.databinding.VhConcatMovieActorsBinding
 
 class MovieActorsAdapter(
     private val movie: Movie,
@@ -14,7 +14,7 @@ class MovieActorsAdapter(
     override fun getItemCount() = movie.actors.size
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): VH =
-        ItemMovieActorsBinding
+        VhConcatMovieActorsBinding
             .inflate(LayoutInflater.from(parent.context), parent, false)
             .let { VH(it) }
 
@@ -22,7 +22,7 @@ class MovieActorsAdapter(
         holder.bind(position, movie.actors[position], callback)
 
     class VH(
-        private val binding: ItemMovieActorsBinding
+        private val binding: VhConcatMovieActorsBinding
     ) : RecyclerView.ViewHolder(binding.root) {
 
         @SuppressLint("SetTextI18n")
