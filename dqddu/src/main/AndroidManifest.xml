@@ -15,10 +15,12 @@
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.DQForOlivia"
-        tools:ignore="AllowBackup">
+        tools:ignore="AllowBackup"
+        tools:targetApi="n">
 
         <!-- 外部的一个 WebView 的库: 方便打开链接 -->
         <activity
@@ -128,6 +130,30 @@
                 <data
                     android:host="@string/intent_host"
                     android:path="/motion-layout-practice-2"
+                    android:scheme="@string/intent_scheme" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".list.concat.ConcatAdapterStudyActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <!-- eg: dqforolivia://www.dqforolivia.com/concat-adapter-study -->
+                <data
+                    android:host="@string/intent_host"
+                    android:path="/concat-adapter-study"
+                    android:scheme="@string/intent_scheme" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".list.paging3.view.Paging3StudyActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <!-- eg: dqforolivia://www.dqforolivia.com/paging3-study -->
+                <data
+                    android:host="@string/intent_host"
+                    android:path="/paging3-study"
                     android:scheme="@string/intent_scheme" />
             </intent-filter>
         </activity>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="h1">96sp</dimen>
+    <dimen name="h2">60sp</dimen>
+    <dimen name="h3">48sp</dimen>
+    <dimen name="h4">34sp</dimen>
+    <dimen name="h5">24sp</dimen>
+    <dimen name="h6">20sp</dimen>
+    <dimen name="title">16sp</dimen>
+    <dimen name="subtitle">12sp</dimen>
+    <dimen name="body">14sp</dimen>
+    <dimen name="button">14sp</dimen>
+    <dimen name="over_line">10sp</dimen>
+</resources>

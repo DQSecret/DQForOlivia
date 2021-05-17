@@ -7,4 +7,6 @@
     <string name="str_flow_shared_flow_example">SharedFlow示例</string>
     <string name="str_motion_layout_practice">MotionLayout-实践</string>
     <string name="str_motion_layout_practice_2">MotionLayout-实践-2</string>
+    <string name="str_concat_adapter_study">ConcatAdapter学习</string>
+    <string name="str_paging3_study">Paging3学习</string>
 </resources>
