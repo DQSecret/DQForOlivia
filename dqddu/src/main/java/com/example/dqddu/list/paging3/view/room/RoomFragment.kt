@@ -8,5 +8,4 @@ import com.example.dqddu.databinding.FragmentPaging3RoomBinding
 class RoomFragment : Fragment(R.layout.fragment_paging3_room) {
 
     private val binding by viewBinding(FragmentPaging3RoomBinding::bind)
-
 }

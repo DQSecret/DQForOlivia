@@ -8,5 +8,4 @@ import com.example.dqddu.databinding.FragmentPaging3LoaderBinding
 class LoaderFragment : Fragment(R.layout.fragment_paging3_loader) {
 
     private val binding by viewBinding(FragmentPaging3LoaderBinding::bind)
-
 }

@@ -25,11 +25,16 @@ class ClipDrawableProgressView @JvmOverloads constructor(
         setBackgroundResource(R.drawable.view_clip_drawable_progress)
     }
 
-    fun setProgress(progress: Float) {
-        setValue((progress * 10000).toInt())
+    companion object {
+        private const val LEVEL_MINIMUM = 0L
+        private const val LEVEL_MAXIMUM = 10000L
     }
 
-    private fun setValue(@IntRange(from = 0, to = 10000) level: Int) {
+    fun setProgress(progress: Float) {
+        setValue((progress * LEVEL_MAXIMUM).toInt())
+    }
+
+    private fun setValue(@IntRange(from = LEVEL_MINIMUM, to = LEVEL_MAXIMUM) level: Int) {
         this.background.let {
             it as LayerDrawable
         }.let {

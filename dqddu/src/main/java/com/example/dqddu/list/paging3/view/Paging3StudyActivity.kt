@@ -1,6 +1,5 @@
 package com.example.dqddu.list.paging3.view
 
-
 import android.os.Bundle
 import androidx.navigation.findNavController
 import androidx.navigation.ui.setupWithNavController

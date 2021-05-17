@@ -1,3 +1,5 @@
+@file:Suppress("MagicNumber")
+
 package com.example.dqddu.list.concat
 
 import android.view.LayoutInflater

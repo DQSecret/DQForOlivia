@@ -2,12 +2,15 @@ package com.example.dqddu.list.concat
 
 import android.os.Parcelable
 import androidx.recyclerview.widget.DiffUtil
+import com.squareup.moshi.JsonClass
 import kotlinx.parcelize.Parcelize
 import kotlin.random.Random
 
 data class Movie(
     val id: Long,
-    val cnm: String, val enm: String = "", val posterUrl: String = "",
+    val cnm: String,
+    val enm: String = "",
+    val posterUrl: String = "",
     val intro: String,
     val actors: List<Actor>
 ) {
@@ -23,12 +26,21 @@ data class Movie(
         )
     }
 
+    @JsonClass(generateAdapter = true)
     @Parcelize
     data class Actor(val id: Long, val name: String, val role: String) : Parcelable {
 
         companion object {
+
+            private const val RANDOM_ACTOR_ID_BOTTOM = 1L
+            private const val RANDOM_ACTOR_ID_TOP = 1000L
+
             fun getSimple(): Actor {
-                return Actor(Random.nextLong(1, 1000), "演员", "角色")
+                return Actor(
+                    Random.nextLong(RANDOM_ACTOR_ID_BOTTOM, RANDOM_ACTOR_ID_TOP),
+                    "演员",
+                    "角色"
+                )
             }
 
             val DiffCallback = object : DiffUtil.ItemCallback<Actor>() {
@@ -46,6 +58,6 @@ data class Movie(
             }
         }
 
-        fun roleFormat() = "饰:${role}"
+        fun roleFormat() = "饰:$role"
     }
 }

@@ -1,3 +1,5 @@
+@file:Suppress("MagicNumber")
+
 package com.example.dqddu.list.concat
 
 import android.os.Bundle
@@ -57,6 +59,7 @@ class ConcatAdapterStudyActivity : BaseBindingActivity<ActivityConcatAdapterStud
         binding.recycler.adapter = concatAdapter
     }
 
+    // basicInfoAdapter 的高度
     private var mMaxScroll = 172.dp
     private var mScrollY = -1F
 
