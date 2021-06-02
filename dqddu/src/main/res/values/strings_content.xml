@@ -100,4 +100,6 @@
         "For example, position the FAB to one side of stream of a cards so the FAB won’t interfere "
         "when a user tries to pick up one of cards.\n\n"
     </string>
+    <string name="str_image_picker_select_image">选择</string>
+    <string name="str_image_picker_take_picture">拍照</string>
 </resources>

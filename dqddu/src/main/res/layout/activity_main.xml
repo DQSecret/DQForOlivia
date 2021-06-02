@@ -94,11 +94,20 @@
         android:textAllCaps="false"
         tools:ignore="MissingConstraints" />
 
+    <Button
+        android:id="@+id/btn_image_picker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#8BC34A"
+        android:text="@string/str_image_picker"
+        android:textAllCaps="false"
+        tools:ignore="MissingConstraints" />
+
     <androidx.constraintlayout.helper.widget.Flow
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:padding="16dp"
-        app:constraint_referenced_ids="btn_screenshots,btn_network_example,btn_motion_layout_example,btn_motion_layout_example_2,btn_flow_state_flow_example,btn_flow_shared_flow_example,btn_motion_layout_practice,btn_motion_layout_practice_2,btn_concat_adapter_study,btn_paging3_study"
+        app:constraint_referenced_ids="btn_screenshots,btn_network_example,btn_motion_layout_example,btn_motion_layout_example_2,btn_flow_state_flow_example,btn_flow_shared_flow_example,btn_motion_layout_practice,btn_motion_layout_practice_2,btn_concat_adapter_study,btn_paging3_study,btn_image_picker"
         app:flow_horizontalBias="0"
         app:flow_horizontalGap="10dp"
         app:flow_horizontalStyle="packed"

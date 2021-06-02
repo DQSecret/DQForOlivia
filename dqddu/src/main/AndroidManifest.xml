@@ -11,6 +11,8 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <!-- 振动权限 -->
     <uses-permission android:name="android.permission.VIBRATE" />
+    <!-- 拍照权限, 详见[ImagePicker] -->
+    <uses-permission android:name="android.permission.CAMERA" />
 
     <application
         android:name=".base.BaseApp"
@@ -154,5 +156,28 @@
                     android:scheme="@string/intent_scheme" />
             </intent-filter>
         </activity>
+
+        <activity android:name=".results.ImagePickerActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <!-- eg: dqforolivia://www.dqforolivia.com/image-picker -->
+                <data
+                    android:host="@string/intent_host"
+                    android:path="/image-picker"
+                    android:scheme="@string/intent_scheme" />
+            </intent-filter>
+        </activity>
+        <!-- ImagePickerActivity - ImagePicker 需要用到 -->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
     </application>
 </manifest>

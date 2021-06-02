@@ -51,5 +51,9 @@ class MainActivity : BaseBindingActivity<ActivityMainBinding>() {
         binding.btnPaging3Study.setOnClickListener {
             startPageByScheme("paging3-study")
         }
+        // 跳转到ImagePicker
+        binding.btnImagePicker.setOnClickListener {
+            startPageByScheme("image-picker")
+        }
     }
 }
