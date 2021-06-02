@@ -1,9 +1,11 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 buildscript {
-    ext.kotlin_version = '1.5.0'
+    ext.kotlin_version = '1.5.10'
     repositories {
         google()
-        jcenter()
+        mavenCentral()
+        maven { url 'https://jitpack.io' }
+        jcenter() // 暂时还去不掉, 因为 com.thefinestartist:finestwebview:1.2.7 这个库没有更新值 mavenCentral
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:4.2.1'
@@ -21,7 +23,9 @@ plugins {
 allprojects {
     repositories {
         google()
-        jcenter()
+        mavenCentral()
+        maven { url 'https://jitpack.io' }
+        jcenter() // 暂时还去不掉, 因为 com.thefinestartist:finestwebview:1.2.7 这个库没有更新值 mavenCentral
     }
 }
 

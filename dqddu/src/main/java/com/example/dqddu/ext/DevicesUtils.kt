@@ -33,9 +33,9 @@ val deviceName: String
         val manufacturer = Build.MANUFACTURER
         val model = Build.MODEL
         return if (model.startsWith(manufacturer)) {
-            model.capitalize(Locale.getDefault())
+            model.replaceFirstChar { if (it.isLowerCase()) it.titlecase(Locale.getDefault()) else it.toString() }
         } else {
-            manufacturer.capitalize(Locale.getDefault()) + " " + model
+            manufacturer.replaceFirstChar { if (it.isLowerCase()) it.titlecase(Locale.getDefault()) else it.toString() } + " " + model
         }
     }
 
