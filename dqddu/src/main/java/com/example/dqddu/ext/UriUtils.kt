@@ -7,7 +7,7 @@ import android.content.Context
 import android.content.Intent
 import android.net.Uri
 import android.webkit.URLUtil
-import com.thefinestartist.finestwebview.FinestWebView
+import com.example.dqddu.base.WebActivity
 
 /**
  * Uri 相关扩展函数汇总
@@ -38,7 +38,7 @@ fun Uri.open(context: Context): Boolean =
     }
 
 fun Uri.openInside(context: Context) =
-    FinestWebView.Builder(context).show(this.toString())
+    WebActivity.start(context, this.toString())
 
 fun Uri.openOutside(context: Context): Boolean =
     try {

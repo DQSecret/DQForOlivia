@@ -5,7 +5,6 @@ buildscript {
         google()
         mavenCentral()
         maven { url 'https://jitpack.io' }
-        jcenter() // 暂时还去不掉, 因为 com.thefinestartist:finestwebview:1.2.7 这个库没有更新值 mavenCentral
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:4.2.1'
@@ -25,7 +24,6 @@ allprojects {
         google()
         mavenCentral()
         maven { url 'https://jitpack.io' }
-        jcenter() // 暂时还去不掉, 因为 com.thefinestartist:finestwebview:1.2.7 这个库没有更新值 mavenCentral
     }
 }
 

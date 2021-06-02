@@ -121,7 +121,6 @@ dependencies {
     implementation 'io.michaelrocks:libphonenumber-android:8.12.21'
 
     // WebView的一个库
-    implementation 'com.thefinestartist:finestwebview:1.2.7'
     implementation 'com.github.Justson.AgentWeb:agentweb-core:v4.1.9-androidx'
 
     // Glide相关
