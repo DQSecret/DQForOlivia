@@ -10,7 +10,7 @@
         android:id="@+id/btn_screenshots"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="#F44336"
+        android:backgroundTint="@color/red_500"
         android:text="@string/str_screenshots"
         tools:ignore="MissingConstraints" />
 
@@ -18,7 +18,7 @@
         android:id="@+id/btn_network_example"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="#E91E63"
+        android:backgroundTint="@color/pink_500"
         android:text="@string/str_network_example"
         tools:ignore="MissingConstraints" />
 
@@ -26,7 +26,7 @@
         android:id="@+id/btn_motion_layout_example"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="#9C27B0"
+        android:backgroundTint="@color/purple_500"
         android:text="@string/str_motion_layout_example"
         android:textAllCaps="false"
         tools:ignore="MissingConstraints" />
@@ -35,7 +35,7 @@
         android:id="@+id/btn_motion_layout_example_2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="#673AB7"
+        android:backgroundTint="@color/deep_purple_500"
         android:text="@string/str_motion_layout_example_2"
         android:textAllCaps="false"
         tools:ignore="MissingConstraints" />
@@ -44,7 +44,7 @@
         android:id="@+id/btn_flow_state_flow_example"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="#3F51B5"
+        android:backgroundTint="@color/indigo_500"
         android:text="@string/str_flow_state_flow_example"
         android:textAllCaps="false"
         tools:ignore="MissingConstraints" />
@@ -53,7 +53,7 @@
         android:id="@+id/btn_flow_shared_flow_example"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="#2196F3"
+        android:backgroundTint="@color/blue_500"
         android:text="@string/str_flow_shared_flow_example"
         android:textAllCaps="false"
         tools:ignore="MissingConstraints" />
@@ -62,7 +62,7 @@
         android:id="@+id/btn_motion_layout_practice"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="#03A9F4"
+        android:backgroundTint="@color/light_blue_500"
         android:text="@string/str_motion_layout_practice"
         android:textAllCaps="false"
         tools:ignore="MissingConstraints" />
@@ -71,7 +71,7 @@
         android:id="@+id/btn_motion_layout_practice_2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="#00BCD4"
+        android:backgroundTint="@color/cyan_500"
         android:text="@string/str_motion_layout_practice_2"
         android:textAllCaps="false"
         tools:ignore="MissingConstraints" />
@@ -80,7 +80,7 @@
         android:id="@+id/btn_concat_adapter_study"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="#009688"
+        android:backgroundTint="@color/teal_500"
         android:text="@string/str_concat_adapter_study"
         android:textAllCaps="false"
         tools:ignore="MissingConstraints" />
@@ -89,7 +89,7 @@
         android:id="@+id/btn_paging3_study"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="#4CAF50"
+        android:backgroundTint="@color/green_500"
         android:text="@string/str_paging3_study"
         android:textAllCaps="false"
         tools:ignore="MissingConstraints" />
@@ -98,7 +98,7 @@
         android:id="@+id/btn_image_picker"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="#8BC34A"
+        android:backgroundTint="@color/light_green_500"
         android:text="@string/str_image_picker"
         android:textAllCaps="false"
         tools:ignore="MissingConstraints" />
