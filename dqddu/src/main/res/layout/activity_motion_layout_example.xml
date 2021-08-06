@@ -7,14 +7,22 @@
     <com.example.dqddu.motionlayout.example.widgets.SwipeView
         android:id="@+id/view_swipe"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        app:layout_constraintBottom_toTopOf="@id/view_carousel"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_height="wrap_content" />
 
     <com.example.dqddu.motionlayout.example.widgets.CarouselView
         android:id="@+id/view_carousel"
         android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <com.example.dqddu.motionlayout.example.widgets.CarouseProView
+        android:id="@+id/view_carousel_pro"
+        android:layout_width="match_parent"
         android:layout_height="0dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/view_swipe" />
+        app:layout_constraintDimensionRatio="1:1" />
+
+    <androidx.constraintlayout.helper.widget.Flow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:constraint_referenced_ids="view_swipe,view_carousel,view_carousel_pro"
+        app:flow_wrapMode="chain" />
 </androidx.constraintlayout.widget.ConstraintLayout>

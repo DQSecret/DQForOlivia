@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- Start -->
+    <ConstraintSet android:id="@+id/start">
+
+        <Constraint
+            android:id="@id/view_gradient"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@id/middle"
+            app:layout_constraintDimensionRatio="w,1:10"
+            app:layout_constraintTop_toTopOf="parent">
+            <CustomAttribute
+                app:attributeName="BackgroundColor"
+                app:customColorValue="@color/teal_500" />
+        </Constraint>
+
+        <Constraint
+            android:id="@id/left"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="@id/middle"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintTop_toTopOf="@id/middle">
+            <Layout app:layout_constraintEnd_toStartOf="@id/middle" />
+        </Constraint>
+
+        <Constraint
+            android:id="@id/middle"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintTop_toTopOf="@id/view_gradient"
+            app:layout_constraintWidth_percent="0.8">
+            <Layout
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+            <Transform
+                android:rotation="0"
+                android:scaleX="1"
+                android:scaleY="1" />
+        </Constraint>
+
+        <Constraint
+            android:id="@id/right"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="@id/middle"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintTop_toTopOf="@id/middle">
+            <Layout app:layout_constraintStart_toEndOf="@id/middle" />
+        </Constraint>
+    </ConstraintSet>
+
+    <!-- Previous -->
+    <ConstraintSet android:id="@+id/previous">
+
+        <Constraint
+            android:id="@id/view_gradient"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@id/left"
+            app:layout_constraintDimensionRatio="w,1:10"
+            app:layout_constraintTop_toTopOf="parent">
+            <CustomAttribute
+                app:attributeName="BackgroundColor"
+                app:customColorValue="@color/red_500" />
+        </Constraint>
+
+        <Constraint
+            android:id="@id/left"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintTop_toTopOf="@id/view_gradient"
+            app:layout_constraintWidth_percent="0.8">
+            <Layout
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+        </Constraint>
+
+        <Constraint
+            android:id="@id/middle"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="@id/left"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintTop_toTopOf="@id/left">
+            <Layout app:layout_constraintStart_toEndOf="@id/left" />
+        </Constraint>
+
+        <Constraint
+            android:id="@id/right"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="@id/middle"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintTop_toTopOf="@id/middle">
+            <Layout app:layout_constraintStart_toEndOf="@id/middle" />
+        </Constraint>
+    </ConstraintSet>
+
+    <!-- Next -->
+    <ConstraintSet android:id="@+id/next">
+
+        <Constraint
+            android:id="@id/view_gradient"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@id/right"
+            app:layout_constraintDimensionRatio="w,1:10"
+            app:layout_constraintTop_toTopOf="parent">
+            <CustomAttribute
+                app:attributeName="BackgroundColor"
+                app:customColorValue="@color/orange_500" />
+        </Constraint>
+
+        <Constraint
+            android:id="@id/left"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="@id/middle"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintTop_toTopOf="@id/middle">
+            <Layout app:layout_constraintEnd_toStartOf="@id/middle" />
+        </Constraint>
+
+        <Constraint
+            android:id="@id/middle"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="@id/right"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintTop_toTopOf="@id/right">
+            <Layout app:layout_constraintEnd_toStartOf="@id/right" />
+        </Constraint>
+
+        <Constraint
+            android:id="@id/right"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintTop_toTopOf="@id/view_gradient"
+            app:layout_constraintWidth_percent="0.8">
+            <Layout
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+        </Constraint>
+    </ConstraintSet>
+
+    <!-- 缩放+旋转 -->
+    <ConstraintSet android:id="@+id/scale">
+
+        <Constraint
+            android:id="@id/left"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="@id/middle"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintTop_toTopOf="@id/middle">
+            <Layout app:layout_constraintEnd_toStartOf="parent" />
+        </Constraint>
+
+        <Constraint
+            android:id="@id/middle"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintTop_toTopOf="@id/view_gradient"
+            app:layout_constraintWidth_percent="0.8">
+            <Layout
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+            <Transform
+                android:rotation="45"
+                android:scaleX="0.5"
+                android:scaleY="0.5" />
+        </Constraint>
+
+        <Constraint
+            android:id="@id/right"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="@id/middle"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintTop_toTopOf="@id/middle">
+            <Layout app:layout_constraintStart_toEndOf="parent" />
+        </Constraint>
+    </ConstraintSet>
+
+    <!-- 动画 -->
+    <Transition
+        app:constraintSetEnd="@id/previous"
+        app:constraintSetStart="@id/start">
+        <OnSwipe app:dragDirection="dragRight" />
+    </Transition>
+
+    <Transition
+        app:constraintSetEnd="@id/next"
+        app:constraintSetStart="@id/start">
+        <OnSwipe app:dragDirection="dragLeft" />
+    </Transition>
+
+    <Transition
+        app:constraintSetEnd="@id/scale"
+        app:constraintSetStart="@id/start">
+        <!-- 围绕中心点顺时针旋转,牛逼~但是和左右滑动手势有所冲突 -->
+        <!--<OnSwipe
+            app:dragDirection="dragClockwise"
+            app:rotationCenterId="@id/view_gradient" />-->
+        <OnSwipe
+            app:dragDirection="dragDown"
+            app:touchRegionId="@id/middle" />
+        <!-- 点击的话,无法控制快速多次点击的效果 -->
+        <!--<OnClick
+            app:clickAction="toggle"
+            app:targetId="@id/middle" />-->
+    </Transition>
+</MotionScene>
