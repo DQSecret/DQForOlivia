@@ -10,4 +10,5 @@
     <string name="str_concat_adapter_study">ConcatAdapter学习</string>
     <string name="str_paging3_study">Paging3学习</string>
     <string name="str_image_picker">Image Picker</string>
+    <string name="str_media_dev_center">Media Dev Center</string>
 </resources>

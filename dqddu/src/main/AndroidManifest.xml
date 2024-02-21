@@ -179,5 +179,18 @@
                 android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/file_paths" />
         </provider>
+
+        <activity
+            android:name=".media.MediaDevCenterActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <!-- eg: dqforolivia://www.dqforolivia.com/image-picker -->
+                <data
+                    android:host="@string/intent_host"
+                    android:path="/media-dev-center"
+                    android:scheme="@string/intent_scheme" />
+            </intent-filter>
+        </activity>
     </application>
 </manifest>

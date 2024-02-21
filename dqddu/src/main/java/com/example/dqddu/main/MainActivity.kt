@@ -55,5 +55,9 @@ class MainActivity : BaseBindingActivity<ActivityMainBinding>() {
         binding.btnImagePicker.setOnClickListener {
             startPageByScheme("image-picker")
         }
+        // 跳转到MediaDevCenter
+        binding.btnMediaDevCenter.setOnClickListener {
+            startPageByScheme("media-dev-center")
+        }
     }
 }
